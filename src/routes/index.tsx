@@ -620,19 +620,15 @@ function Index() {
           <p className="eyebrow">Quem conduzirá seu encontro</p>
           <h2 className="mt-6 text-[1.8rem] leading-[1.2] text-ink md:text-[2.3rem]">
             Eu sou Amanda Barbacena
-            <span className="block italic text-accent">CRP 01/26914</span>
           </h2>
           <p className="mt-6 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Sou psicóloga clínica e atendo mulheres adultas que gerenciam tudo —
-            casa, trabalho, família — e que, por isso mesmo, raramente param para
-            olhar para o próprio funcionamento.
+            Sou psicóloga clínica, cristã, casada, registrada no CRP 01/26914, e trabalho no cuidado de mulheres altamente funcionais, mas que vivem sobrecarregadas por tudo o que fazem, antecipam e tentam manter sob controle.
           </p>
           <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Antes da Psicologia, construí carreira no ambiente corporativo,
-            inclusive em gestão. Conheço por dentro a lógica de quem responde por
-            resultado e sente que precisa garantir tudo. Formação em Relações
-            Internacionais e MBA pela FGV. Trabalho com abordagens comportamentais
-            e cognitivas e prática baseada em evidências.
+            Minha atuação é orientada por abordagens cognitivas e comportamentais e por práticas baseadas em evidências. Isso dá à SDT estrutura, método e profundidade clínica para que o encontro não se transforme em uma conversa solta ou em uma lista de conselhos genéricos.
+          </p>
+          <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
+            Antes da psicologia, trabalhei durante anos em uma grande instituição financeira, inclusive em posição de gestão. Essa trajetória ampliou meu repertório sobre contextos de alta responsabilidade, cobrança, desempenho e tomada de decisão, hoje integrado à minha experiência clínica com mulheres.
           </p>
         </div>
       </section>
