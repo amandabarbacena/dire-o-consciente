@@ -81,7 +81,7 @@ const reconhecimento = [
   },
   {
     n: "03",
-    d: "Você tem a sensação de que, se não for você, ninguém faz direito — e essa sensação vem acompanhada de cansaço e de culpa por pensar assim.",
+    d: "Você tem a sensação de que, se não for você, ninguém faz direito. E essa sensação vem acompanhada de cansaço e de culpa por pensar assim.",
   },
   {
     n: "04",
