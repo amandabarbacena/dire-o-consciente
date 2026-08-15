@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroOverwhelm from "@/assets/hero-overwhelm.jpg";
 import notesStill from "@/assets/notes-still.jpg";
-import amandaPortrait from "@/assets/amanda-portrait.jpg";
+import amandaAsset from "@/assets/amanda-barbacena.jpg.asset.json";
 import { whatsappUrl } from "@/config/site";
+import { Reveal } from "@/components/Reveal";
+import { Disclosure } from "@/components/Disclosure";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -37,14 +39,16 @@ function CTA({
 }: {
   id: string;
   children: React.ReactNode;
-  variant?: "solid" | "light";
+  variant?: "solid" | "light" | "outline";
 }) {
   const base =
-    "inline-flex min-h-13 items-center justify-center rounded-full px-8 py-4 text-center text-[0.95rem] font-medium tracking-wide transition-colors duration-200";
+    "group relative inline-flex min-h-13 items-center justify-center gap-3 overflow-hidden rounded-full px-8 py-4 text-center text-[0.95rem] font-medium tracking-wide transition-all duration-300 hover:-translate-y-0.5";
   const styles =
     variant === "solid"
-      ? "bg-ink text-ink-foreground hover:bg-accent"
-      : "bg-ink-foreground text-ink hover:bg-accent hover:text-accent-foreground";
+      ? "bg-ink text-ink-foreground shadow-[0_10px_30px_-18px_var(--color-ink)] hover:shadow-[0_18px_40px_-18px_var(--color-ink)]"
+      : variant === "light"
+        ? "bg-ink-foreground text-ink hover:bg-background"
+        : "border border-ink/20 text-ink hover:border-ink/50";
   return (
     <a
       id={id}
@@ -54,12 +58,37 @@ function CTA({
       rel="noopener noreferrer"
       className={`${base} ${styles}`}
     >
-      {children}
+      <span className="relative z-10">{children}</span>
+      <span
+        aria-hidden
+        className="relative z-10 h-px w-5 shrink-0 bg-current transition-all duration-300 group-hover:w-8"
+      />
     </a>
   );
 }
 
 const microcopy = "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
+
+function Micro({ tone = "light" }: { tone?: "light" | "dark" }) {
+  return (
+    <p
+      className={`mt-6 text-[0.6rem] whitespace-nowrap sm:text-[0.72rem] ${
+        tone === "dark" ? "text-ink-foreground/60" : "text-muted-foreground"
+      }`}
+    >
+      {microcopy}
+    </p>
+  );
+}
+
+function SectionLabel({ children, tone = "light" }: { children: React.ReactNode; tone?: "light" | "dark" }) {
+  return (
+    <div className="flex items-center gap-4">
+      <span className={`h-px w-8 ${tone === "dark" ? "bg-ink-foreground/35" : "bg-accent/60"}`} />
+      <p className={`eyebrow ${tone === "dark" ? "text-ink-foreground/60" : ""}`}>{children}</p>
+    </div>
+  );
+}
 
 const cenaDoDia: { hora: string; texto: string }[] = [
   { hora: "06:40", texto: "Você acorda já revisando mentalmente o dia de todo mundo." },
@@ -69,30 +98,35 @@ const cenaDoDia: { hora: string; texto: string }[] = [
   { hora: "23:10", texto: "O corpo para. A cabeça continua organizando o amanhã." },
 ];
 
-
 const reconhecimento = [
   {
     n: "01",
+    t: "Você delega e continua conferindo",
     d: "Você até delega mas continua acompanhando, conferindo, lembrando e, no fim, refazendo.",
   },
   {
     n: "02",
+    t: "“Deixa que eu faço”",
     d: "“Deixa que eu faço” sai da sua boca antes mesmo de você pensar. É mais rápido, é mais garantido, é menos desgastante do que esperar.",
   },
   {
     n: "03",
+    t: "Se não for você, ninguém faz direito",
     d: "Você tem a sensação de que, se não for você, ninguém faz direito. E essa sensação vem acompanhada de cansaço e de culpa por pensar assim.",
   },
   {
     n: "04",
+    t: "Nenhum descanso é inteiro",
     d: "Enquanto existe algo pendente, você não descansa por inteiro. O corpo até para mas a cabeça continua administrando.",
   },
   {
     n: "05",
+    t: "Você resolve antes de acontecer",
     d: 'Você antecipa o que "pode dar errado" e já começa a resolver antes mesmo que aconteça.',
   },
   {
     n: "06",
+    t: "Você entende o ciclo e repete",
     d: "Você já entendeu o ciclo. Já leu, já ouviu, já falou sobre isso. E, na hora em que ele aparece, você segue fazendo tudo igual.",
   },
 ];
@@ -200,45 +234,96 @@ const faq = [
 function Index() {
   return (
     <main className="bg-background">
-      {/* HERO */}
-      <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-16 pb-20 md:grid-cols-2 md:gap-20 md:px-10 md:pt-28 md:pb-28">
-        <div>
-          <p className="text-[0.75rem] uppercase tracking-[0.18em] text-muted-foreground">
-            Amanda Barbacena <span className="mx-1.5">·</span> Psicóloga de mulheres
+      {/* HEADER */}
+      <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
+        <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-3.5 md:px-10">
+          <p className="min-w-0 truncate text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
+            Amanda Barbacena <span className="mx-1 text-accent">·</span> Psicóloga de mulheres
           </p>
-          <p className="eyebrow mt-5">Sessão de Direção Terapêutica</p>
-          <h1 className="mt-8 text-[2.1rem] leading-[1.1] text-ink sm:text-[2.7rem] md:text-[3.2rem]">
-            Você dá conta de tudo.
-            <span className="block italic text-accent">
-              O problema é que tudo continua dependendo de você.
-            </span>
-          </h1>
-          <p className="mt-8 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
-            A Sessão de Direção Terapêutica é um encontro online, único e
-            individual. Em cerca de 60 minutos, olhamos para o ciclo que mantém
-            você antecipando, monitorando e corrigindo tudo. Você sai sabendo
-            como ele funciona e como começar a interrompê-lo.
-          </p>
-          <p className="mt-5 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
-            Em até 48 horas, essa direção chega por escrito, em um documento
-            personalizado para consultar na hora em que o padrão aparecer.
-          </p>
-          <div className="mt-10">
-            <CTA id="cta-whatsapp-hero">
-              Quero agendar minha Sessão de Direção Terapêutica
-            </CTA>
-          </div>
-          <p className="mt-6 text-[0.6rem] whitespace-nowrap text-muted-foreground sm:text-[0.72rem]">{microcopy}</p>
+          <a
+            id="cta-whatsapp-header"
+            data-cta="cta-whatsapp-header"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden shrink-0 rounded-full border border-ink/20 px-5 py-2 text-[0.78rem] tracking-wide text-ink transition-colors hover:border-ink/60 md:inline-flex"
+          >
+            Agendar no WhatsApp
+          </a>
         </div>
+      </header>
 
-        <img
-          src={heroOverwhelm}
-          alt="Mulher exausta à mesa de trabalho, com laptop, caderno e xícara, em luz suave de manhã"
-          width={1280}
-          height={1600}
-          className="h-[420px] w-full rounded-[2rem] object-cover md:h-[620px]"
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-[60vh] bg-[radial-gradient(60%_60%_at_75%_0%,color-mix(in_oklab,var(--color-accent)_12%,transparent),transparent)]"
         />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-14 pb-20 md:grid-cols-[1.05fr_0.95fr] md:gap-20 md:px-10 md:pt-24 md:pb-28">
+          <Reveal>
+            <SectionLabel>Sessão de Direção Terapêutica</SectionLabel>
+            <h1 className="mt-8 text-[2.1rem] leading-[1.08] text-ink sm:text-[2.7rem] md:text-[3.35rem]">
+              Você dá conta de tudo.
+              <span className="mt-2 block italic text-accent">
+                O problema é que tudo continua dependendo de você.
+              </span>
+            </h1>
+            <p className="mt-8 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
+              A Sessão de Direção Terapêutica é um encontro online, único e
+              individual. Em cerca de 60 minutos, olhamos para o ciclo que mantém
+              você antecipando, monitorando e corrigindo tudo. Você sai sabendo
+              como ele funciona e como começar a interrompê-lo.
+            </p>
+            <p className="mt-5 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
+              Em até 48 horas, essa direção chega por escrito, em um documento
+              personalizado para consultar na hora em que o padrão aparecer.
+            </p>
+            <div className="mt-10">
+              <CTA id="cta-whatsapp-hero">
+                Quero agendar minha Sessão de Direção Terapêutica
+              </CTA>
+            </div>
+            <Micro />
+          </Reveal>
+
+          <Reveal delay={150} className="relative">
+            <div
+              aria-hidden
+              className="absolute -left-4 -top-4 hidden h-32 w-32 border-l border-t border-accent/40 md:block"
+            />
+            <div
+              aria-hidden
+              className="absolute -bottom-4 -right-4 hidden h-32 w-32 border-b border-r border-accent/40 md:block"
+            />
+            <img
+              src={heroOverwhelm}
+              alt="Mulher exausta à mesa de trabalho, com laptop, caderno e xícara, em luz suave de manhã"
+              width={1280}
+              height={1600}
+              className="relative h-[420px] w-full rounded-[2rem] object-cover md:h-[620px]"
+            />
+            <div className="absolute -bottom-6 left-4 right-4 rounded-2xl border border-border bg-background/90 px-5 py-4 backdrop-blur md:left-8 md:right-auto md:max-w-[16rem]">
+              <p className="eyebrow">Entrega</p>
+              <p className="mt-2 text-[0.95rem] leading-snug text-ink">
+                Documento personalizado em até 48 horas.
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </section>
+
+      {/* FAIXA */}
+      <div className="border-y border-ink/10 bg-sand">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-2 px-6 py-4 text-[0.68rem] uppercase tracking-[0.2em] text-muted-foreground md:px-10">
+          <span>Online</span>
+          <span className="text-accent">·</span>
+          <span>Encontro único</span>
+          <span className="text-accent">·</span>
+          <span>Individual</span>
+          <span className="text-accent">·</span>
+          <span>Direção por escrito</span>
+        </div>
+      </div>
 
       {/* A CENA DA EXAUSTÃO */}
       <section className="relative overflow-hidden bg-sand">
@@ -252,11 +337,12 @@ function Index() {
         />
 
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
-          <p className="eyebrow">A EXAUSTÃO QUE NUNCA TERMINA</p>
+          <Reveal>
+            <SectionLabel>A exaustão que nunca termina</SectionLabel>
+          </Reveal>
 
           <div className="mt-10 grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:gap-20">
-            {/* Coluna esquerda: fala + texto */}
-            <div>
+            <Reveal>
               <h2 className="text-[1.8rem] leading-[1.25] text-ink md:text-[2.6rem]">
                 <span className="text-accent">“</span>Se eu não fizer, ninguém
                 faz. E, se faz, não fica do jeito que eu quero.
@@ -283,14 +369,11 @@ function Index() {
                   </span>
                 </p>
               </div>
-            </div>
+            </Reveal>
 
-            {/* Coluna direita: o dia em ciclo */}
-            <div className="md:pt-4">
+            <Reveal delay={120} className="md:pt-4">
               <div className="rounded-[2rem] bg-ink p-8 text-ink-foreground md:p-10">
-                <p className="eyebrow text-ink-foreground/60">
-                  Um dia qualquer
-                </p>
+                <p className="eyebrow text-ink-foreground/60">Um dia qualquer</p>
                 <ul className="mt-8 space-y-7">
                   {cenaDoDia.map((item, i) => (
                     <li key={item.hora} className="relative flex gap-5">
@@ -319,11 +402,10 @@ function Index() {
                 Vem também da microgestão invisível de tudo que você não
                 conseguiu largar.”
               </p>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>
-
 
       {/* RECONHECIMENTO */}
       <section className="relative overflow-hidden border-y border-ink/10 bg-[color-mix(in_oklab,var(--color-accent)_7%,var(--color-background))]">
@@ -332,9 +414,8 @@ function Index() {
 
         <div className="relative mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-36">
           <div className="grid gap-14 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:gap-20">
-            {/* Coluna fixa */}
-            <div className="md:sticky md:top-24 md:self-start">
-              <p className="eyebrow">Talvez você se reconheça aqui</p>
+            <Reveal className="md:sticky md:top-28 md:self-start">
+              <SectionLabel>Talvez você se reconheça aqui</SectionLabel>
               <h2 className="mt-8 text-[1.9rem] leading-[1.2] text-ink md:text-[2.6rem]">
                 O dia termina, mas você nunca descansa.
               </h2>
@@ -344,93 +425,104 @@ function Index() {
                 sobre a sua semana, a Sessão de Direção Terapêutica foi pensada
                 para você.
               </p>
-            </div>
+              <p className="mt-6 text-[0.78rem] uppercase tracking-[0.18em] text-muted-foreground">
+                Toque para abrir cada uma
+              </p>
+            </Reveal>
 
-            {/* Lista editorial */}
-            <ul className="divide-y divide-ink/10 border-t border-ink/10">
-              {reconhecimento.map((item) => (
-                <li
-                  key={item.n}
-                  className="group grid grid-cols-[auto_1fr] items-baseline gap-6 py-7 transition-colors duration-500 hover:bg-background/70 md:gap-10 md:py-9"
-                >
-                  <span className="font-display text-[1.6rem] leading-none text-accent/50 transition-colors duration-500 group-hover:text-accent md:text-[2rem]">
-                    {item.n}
-                  </span>
-                  <p className="text-[1.02rem] leading-[1.85] text-foreground/80 transition-colors duration-500 group-hover:text-ink md:text-[1.1rem]">
+            <Reveal delay={100}>
+              <div className="border-t border-ink/12">
+                {reconhecimento.map((item, i) => (
+                  <Disclosure
+                    key={item.n}
+                    index={item.n}
+                    label={item.t}
+                    defaultOpen={i === 0}
+                  >
                     {item.d}
-                  </p>
-                </li>
-              ))}
-            </ul>
+                  </Disclosure>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
-
       {/* POR QUE ENTENDER NÃO BASTOU */}
-      <section className="bg-ink text-ink-foreground">
-        <div className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
-          <p className="eyebrow text-ink-foreground/60">
-            Por que entender não bastou
-          </p>
-          <h2 className="mt-8 text-[1.8rem] leading-[1.3] md:text-[2.4rem]">
-            Você não precisa de mais informação sobre si. Precisa de orientação
-            para a hora exata em que o impulso aparece.
-          </h2>
-          <p className="mt-8 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            Você já leu, já ouviu podcast, já conversou com quem te conhece bem.
-            Talvez já tenha falado disso em terapia. E, mesmo assim, quando a
-            situação chega, o corpo age antes: você confere, corrige, assume.
-          </p>
-          <p className="mt-6 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            Você já sabe o que acontece. O que falta é saber o que fazer quando
-            acontecer. Essa brecha só se fecha quando alguém traduz o seu padrão
-            em uma direção concreta: o que observar, onde interromper e o que
-            fazer no lugar. É exatamente isso que a SDT entrega em um único
-            encontro, com objetivo definido e entrega registrada.
-          </p>
+      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -left-20 top-1/2 h-[26rem] w-[26rem] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--color-clay)_18%,transparent),transparent_70%)]"
+        />
+        <div className="relative mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
+          <Reveal>
+            <SectionLabel tone="dark">Por que entender não bastou</SectionLabel>
+            <h2 className="mt-8 text-[1.8rem] leading-[1.3] md:text-[2.4rem]">
+              Você não precisa de mais informação sobre si. Precisa de orientação
+              para a hora exata em que o impulso aparece.
+            </h2>
+            <p className="mt-8 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
+              Você já leu, já ouviu podcast, já conversou com quem te conhece bem.
+              Talvez já tenha falado disso em terapia. E, mesmo assim, quando a
+              situação chega, o corpo age antes: você confere, corrige, assume.
+            </p>
+            <p className="mt-6 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
+              Você já sabe o que acontece. O que falta é saber o que fazer quando
+              acontecer. Essa brecha só se fecha quando alguém traduz o seu padrão
+              em uma direção concreta: o que observar, onde interromper e o que
+              fazer no lugar. É exatamente isso que a SDT entrega em um único
+              encontro, com objetivo definido e entrega registrada.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* DESEJO — HOJE / O CAMINHO */}
       <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
-        <p className="eyebrow">O que você quer de verdade</p>
-        <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-          Continuar sendo altamente funcional sem precisar sustentar tudo para
-          sentir que vai dar certo.
-        </h2>
+        <Reveal>
+          <SectionLabel>O que você quer de verdade</SectionLabel>
+          <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
+            Continuar sendo altamente funcional sem precisar sustentar tudo para
+            sentir que vai dar certo.
+          </h2>
+        </Reveal>
 
-        <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-16">
-          <div>
+        <div className="mt-16 grid gap-8 md:grid-cols-2 md:gap-10">
+          <Reveal className="rounded-[1.75rem] border border-border bg-card/40 p-8 md:p-10">
             <p className="eyebrow">Hoje</p>
             <ul className="mt-6 space-y-4">
               {hoje.map((item) => (
                 <li
                   key={item}
-                  className="border-b border-border pb-4 text-[1.02rem] leading-[1.7] text-muted-foreground"
+                  className="flex gap-4 border-b border-border pb-4 text-[1.02rem] leading-[1.7] text-muted-foreground last:border-0"
                 >
-                  {item}
+                  <span aria-hidden className="mt-[0.7rem] h-px w-4 shrink-0 bg-border" />
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
-          </div>
-          <div>
+          </Reveal>
+          <Reveal
+            delay={120}
+            className="rounded-[1.75rem] border border-accent/30 bg-[color-mix(in_oklab,var(--color-accent)_6%,var(--color-background))] p-8 md:p-10"
+          >
             <p className="eyebrow text-accent">O caminho</p>
             <ul className="mt-6 space-y-4">
               {caminho.map((item) => (
                 <li
                   key={item}
-                  className="border-b border-accent/30 pb-4 text-[1.02rem] leading-[1.7] text-ink"
+                  className="flex gap-4 border-b border-accent/25 pb-4 text-[1.02rem] leading-[1.7] text-ink last:border-0"
                 >
-                  {item}
+                  <span aria-hidden className="mt-[0.65rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
 
         {/* HONESTIDADE — NOTA EDITORIAL */}
-        <div className="relative mx-auto mt-24 max-w-2xl md:mt-32">
+        <Reveal className="relative mx-auto mt-24 block max-w-2xl md:mt-32">
           <div className="absolute -top-8 -left-8 hidden h-24 w-24 border-t border-l border-accent/40 sm:block" />
           <div className="absolute -bottom-8 -right-8 hidden h-24 w-24 border-b border-r border-accent/40 sm:block" />
 
@@ -469,14 +561,14 @@ function Index() {
               <div className="h-2 w-2 rounded-full bg-accent" />
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* A OFERTA */}
       <section className="bg-sand">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:gap-20 md:px-10 md:py-32">
-          <div>
-            <p className="eyebrow">O que é a Sessão de Direção Terapêutica</p>
+          <Reveal>
+            <SectionLabel>O que é a Sessão de Direção Terapêutica</SectionLabel>
             <h2 className="mt-6 text-[1.8rem] leading-[1.25] text-ink md:text-[2.3rem]">
               Um encontro clínico individual com entrega em mãos.
             </h2>
@@ -509,62 +601,86 @@ function Index() {
               <CTA id="cta-whatsapp-oferta">
                 Quero agendar minha Sessão de Direção Terapêutica
               </CTA>
-              <p className="mt-6 text-[0.6rem] whitespace-nowrap text-muted-foreground sm:text-[0.72rem]">{microcopy}</p>
+              <Micro />
             </div>
-          </div>
+          </Reveal>
 
-          <img
-            src={notesStill}
-            alt="Caderno aberto com caneta sobre mesa de linho ao lado de um vaso com eucalipto"
-            width={1408}
-            height={1008}
-            loading="lazy"
-            className="h-[300px] w-full rounded-[2rem] object-cover md:h-[520px]"
-          />
+          <Reveal delay={120} className="relative">
+            <img
+              src={notesStill}
+              alt="Caderno aberto com caneta sobre mesa de linho ao lado de um vaso com eucalipto"
+              width={1408}
+              height={1008}
+              loading="lazy"
+              className="h-[300px] w-full rounded-[2rem] object-cover md:h-[520px]"
+            />
+            <div
+              aria-hidden
+              className="absolute -bottom-5 -left-5 hidden h-24 w-24 border-b border-l border-accent/40 md:block"
+            />
+          </Reveal>
         </div>
       </section>
 
       {/* O QUE VOCÊ LEVA */}
       <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
-        <p className="eyebrow">O que você leva do encontro</p>
-        <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-          Clareza sobre o mecanismo e o que fazer quando ele aparecer.
-        </h2>
-        <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-x-16">
-          {entrega.map((item) => (
-            <div key={item.n}>
+        <Reveal>
+          <SectionLabel>O que você leva do encontro</SectionLabel>
+          <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
+            Clareza sobre o mecanismo e o que fazer quando ele aparecer.
+          </h2>
+        </Reveal>
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          {entrega.map((item, i) => (
+            <Reveal
+              key={item.n}
+              delay={i * 90}
+              className="group rounded-[1.5rem] border border-border bg-card/40 p-8 transition-all duration-500 hover:-translate-y-1 hover:border-accent/40"
+            >
               <span className="font-display text-2xl text-accent">{item.n}</span>
               <h3 className="mt-3 text-xl leading-snug text-ink">{item.t}</h3>
               <p className="mt-3 text-[1rem] leading-[1.8] text-muted-foreground">
                 {item.d}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
-        <div className="mt-16">
+        <Reveal className="mt-16 block">
           <CTA id="cta-whatsapp-middle">
             Quero agendar minha Sessão de Direção Terapêutica
           </CTA>
-          <p className="mt-6 text-[0.6rem] whitespace-nowrap text-muted-foreground sm:text-[0.72rem]">{microcopy}</p>
-        </div>
+          <Micro />
+        </Reveal>
       </section>
 
       {/* COMO FUNCIONA */}
       <section className="bg-sand">
         <div className="mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
-          <p className="eyebrow">Como funciona</p>
-          <h2 className="mt-8 text-[1.8rem] leading-[1.2] text-ink md:text-[2.4rem]">
-            Três passos simples.
-          </h2>
-          <div className="mt-16 grid gap-14 md:grid-cols-3">
-            {passos.map((p) => (
-              <div key={p.n}>
+          <Reveal>
+            <SectionLabel>Como funciona</SectionLabel>
+            <h2 className="mt-8 text-[1.8rem] leading-[1.2] text-ink md:text-[2.4rem]">
+              Três passos simples.
+            </h2>
+          </Reveal>
+          <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-6">
+            {passos.map((p, i) => (
+              <Reveal
+                key={p.n}
+                delay={i * 120}
+                className="relative rounded-[1.5rem] border border-ink/10 bg-background/60 p-8 backdrop-blur-sm"
+              >
                 <span className="font-display text-3xl text-accent">{p.n}</span>
                 <h3 className="mt-4 text-xl text-ink">{p.t}</h3>
                 <p className="mt-3 text-[1rem] leading-[1.8] text-muted-foreground">
                   {p.d}
                 </p>
-              </div>
+                {i < passos.length - 1 && (
+                  <span
+                    aria-hidden
+                    className="absolute -right-3 top-1/2 hidden h-px w-6 bg-accent/40 md:block"
+                  />
+                )}
+              </Reveal>
             ))}
           </div>
         </div>
@@ -572,107 +688,128 @@ function Index() {
 
       {/* PARA QUEM É / NÃO É */}
       <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
-        <p className="eyebrow">Para quem é</p>
-        <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.3rem]">
-          A SDT foi desenhada para um momento específico.
-        </h2>
-        <div className="mt-14 grid gap-12 md:grid-cols-2 md:gap-16">
-          <div>
+        <Reveal>
+          <SectionLabel>Para quem é</SectionLabel>
+          <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.3rem]">
+            A SDT foi desenhada para um momento específico.
+          </h2>
+        </Reveal>
+        <div className="mt-14 grid gap-8 md:grid-cols-2 md:gap-10">
+          <Reveal className="rounded-[1.75rem] border border-accent/30 bg-[color-mix(in_oklab,var(--color-accent)_6%,var(--color-background))] p-8 md:p-10">
             <p className="eyebrow text-accent">Faz sentido se</p>
             <ul className="mt-6 space-y-4">
               {paraQuem.map((item) => (
                 <li
                   key={item}
-                  className="border-b border-accent/30 pb-4 text-[1.02rem] leading-[1.7] text-ink"
+                  className="flex gap-4 border-b border-accent/25 pb-4 text-[1.02rem] leading-[1.7] text-ink last:border-0"
                 >
-                  {item}
+                  <span aria-hidden className="mt-[0.65rem] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
-          </div>
-          <div>
+          </Reveal>
+          <Reveal delay={120} className="rounded-[1.75rem] border border-border bg-card/40 p-8 md:p-10">
             <p className="eyebrow">Não é para</p>
             <ul className="mt-6 space-y-4">
               {naoEhPara.map((item) => (
                 <li
                   key={item}
-                  className="border-b border-border pb-4 text-[1.02rem] leading-[1.7] text-muted-foreground"
+                  className="flex gap-4 border-b border-border pb-4 text-[1.02rem] leading-[1.7] text-muted-foreground last:border-0"
                 >
-                  {item}
+                  <span aria-hidden className="mt-[0.7rem] h-px w-4 shrink-0 bg-border" />
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* AUTORIDADE */}
-      <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 md:grid-cols-[0.8fr_1fr] md:gap-20 md:px-10 md:pb-32">
-        <img
-          src={amandaPortrait}
-          alt="Retrato da psicóloga Amanda Barbacena"
-          width={1008}
-          height={1200}
-          loading="lazy"
-          className="h-[420px] w-full rounded-[2rem] object-cover md:h-[540px]"
-        />
-        <div>
-          <p className="eyebrow">Quem conduzirá seu encontro</p>
-          <h2 className="mt-6 text-[1.8rem] leading-[1.2] text-ink md:text-[2.3rem]">
-            Eu sou Amanda Barbacena
-          </h2>
-          <p className="mt-6 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Sou psicóloga clínica, cristã, casada, registrada no CRP 01/26914, e trabalho no cuidado de mulheres altamente funcionais, mas que vivem sobrecarregadas por tudo o que fazem, antecipam e tentam manter sob controle.
-          </p>
-          <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Minha atuação é orientada por abordagens cognitivas e comportamentais e por práticas baseadas em evidências. Isso dá à SDT estrutura, método e profundidade clínica para que o encontro não se transforme em uma conversa solta ou em uma lista de conselhos genéricos.
-          </p>
-          <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Antes da psicologia, trabalhei durante anos em uma grande instituição financeira, inclusive em posição de gestão. Essa trajetória ampliou meu repertório sobre contextos de alta responsabilidade, cobrança, desempenho e tomada de decisão, hoje integrado à minha experiência clínica com mulheres.
-          </p>
+      <section className="border-y border-ink/10 bg-sand">
+        <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-[0.85fr_1fr] md:gap-20 md:px-10 md:py-32">
+          <Reveal className="relative">
+            <div
+              aria-hidden
+              className="absolute -left-5 -top-5 hidden h-32 w-32 border-l border-t border-accent/40 md:block"
+            />
+            <img
+              src={amandaAsset.url}
+              alt="Retrato da psicóloga Amanda Barbacena, sorrindo, sentada em ambiente claro"
+              width={1280}
+              height={1920}
+              loading="lazy"
+              className="relative h-[480px] w-full rounded-[2rem] object-cover object-top md:h-[600px]"
+            />
+            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-border bg-background/85 px-5 py-4 backdrop-blur md:right-auto md:max-w-[15rem]">
+              <p className="eyebrow">Psicóloga clínica</p>
+              <p className="mt-1.5 font-display text-[1.35rem] leading-tight text-ink">
+                Amanda Barbacena
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <SectionLabel>Quem conduzirá seu encontro</SectionLabel>
+            <h2 className="mt-6 text-[1.8rem] leading-[1.2] text-ink md:text-[2.3rem]">
+              Eu sou Amanda Barbacena
+            </h2>
+            <p className="mt-6 text-[1.05rem] leading-[1.9] text-foreground/80">
+              Sou psicóloga clínica, cristã, casada, registrada no CRP 01/26914, e trabalho no cuidado de mulheres altamente funcionais, mas que vivem sobrecarregadas por tudo o que fazem, antecipam e tentam manter sob controle.
+            </p>
+            <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
+              Minha atuação é orientada por abordagens cognitivas e comportamentais e por práticas baseadas em evidências. Isso dá à SDT estrutura, método e profundidade clínica para que o encontro não se transforme em uma conversa solta ou em uma lista de conselhos genéricos.
+            </p>
+            <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
+              Antes da psicologia, trabalhei durante anos em uma grande instituição financeira, inclusive em posição de gestão. Essa trajetória ampliou meu repertório sobre contextos de alta responsabilidade, cobrança, desempenho e tomada de decisão, hoje integrado à minha experiência clínica com mulheres.
+            </p>
+          </Reveal>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-sand">
-        <div className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
-          <p className="eyebrow">Dúvidas frequentes</p>
+      <section className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
+        <Reveal>
+          <SectionLabel>Dúvidas frequentes</SectionLabel>
           <h2 className="mt-8 text-[1.8rem] leading-[1.2] text-ink md:text-[2.3rem]">
             Antes de agendar.
           </h2>
-          <dl className="mt-14 space-y-10">
-            {faq.map((item) => (
-              <div key={item.q}>
-                <dt className="text-[1.05rem] font-medium text-ink">{item.q}</dt>
-                <dd className="mt-3 text-[1.02rem] leading-[1.85] text-foreground/80">
-                  {item.a}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+        </Reveal>
+        <Reveal delay={100} className="mt-12 block border-t border-ink/12">
+          {faq.map((item, i) => (
+            <Disclosure key={item.q} label={item.q} defaultOpen={i === 0}>
+              {item.a}
+            </Disclosure>
+          ))}
+        </Reveal>
       </section>
 
       {/* FECHAMENTO */}
-      <section className="bg-ink text-ink-foreground">
-        <div className="mx-auto max-w-2xl px-6 py-24 text-center md:px-10 md:py-32">
-          <p className="eyebrow text-ink-foreground/60">
-            Uma direção para fazer diferente
-          </p>
-          <h2 className="mt-8 text-[1.9rem] leading-[1.2] md:text-[2.7rem]">
-            Você não precisa continuar sendo a central de controle de tudo.
-          </h2>
-          <p className="mx-auto mt-8 max-w-md text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            Fale com a minha equipe pelo WhatsApp: você tira suas dúvidas e recebe
-            as informações para agendar sua Sessão de Direção Terapêutica, sem o
-            compromisso de continuidade.
-          </p>
-          <div className="mt-12 flex justify-center">
-            <CTA id="cta-whatsapp-final" variant="light">
-              Quero agendar minha Sessão de Direção Terapêutica
-            </CTA>
-          </div>
-          <p className="mt-6 text-[0.6rem] whitespace-nowrap text-ink-foreground/60 sm:text-[0.72rem]">{microcopy}</p>
+      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_55%_at_50%_0%,color-mix(in_oklab,var(--color-clay)_16%,transparent),transparent)]"
+        />
+        <div className="relative mx-auto max-w-2xl px-6 py-24 text-center md:px-10 md:py-32">
+          <Reveal>
+            <div className="flex justify-center">
+              <SectionLabel tone="dark">Uma direção para fazer diferente</SectionLabel>
+            </div>
+            <h2 className="mt-8 text-[1.9rem] leading-[1.2] md:text-[2.7rem]">
+              Você não precisa continuar sendo a central de controle de tudo.
+            </h2>
+            <p className="mx-auto mt-8 max-w-md text-[1.05rem] leading-[1.9] text-ink-foreground/70">
+              Fale com a minha equipe pelo WhatsApp: você tira suas dúvidas e recebe
+              as informações para agendar sua Sessão de Direção Terapêutica, sem o
+              compromisso de continuidade.
+            </p>
+            <div className="mt-12 flex justify-center">
+              <CTA id="cta-whatsapp-final" variant="light">
+                Quero agendar minha Sessão de Direção Terapêutica
+              </CTA>
+            </div>
+            <Micro tone="dark" />
+          </Reveal>
         </div>
       </section>
 
