@@ -384,11 +384,11 @@ function Index() {
             situação chega, o corpo age antes: você confere, corrige, assume.
           </p>
           <p className="mt-6 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            A distância entre entender e fazer diferente não se fecha com mais
-            explicação. Ela se fecha quando alguém traduz o seu padrão em uma
-            direção concreta: o que observar, onde interromper e o que fazer no
-            lugar. É exatamente isso que a SDT entrega em um único encontro,
-            com objetivo definido e entrega registrada.
+            Você já sabe o que acontece. O que falta é saber o que fazer quando
+            acontecer. Essa brecha só se fecha quando alguém traduz o seu padrão
+            em uma direção concreta: o que observar, onde interromper e o que
+            fazer no lugar. É exatamente isso que a SDT entrega em um único
+            encontro, com objetivo definido e entrega registrada.
           </p>
         </div>
       </section>
