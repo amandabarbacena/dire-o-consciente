@@ -663,8 +663,8 @@ function Index() {
             Você não precisa continuar sendo a central de controle de tudo.
           </h2>
           <p className="mx-auto mt-8 max-w-md text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            Fale com a nossa equipe pelo WhatsApp: você tira suas dúvidas e recebe
-            as informações para agendar sua Sessão de Direção Terapêutica — sem
+            Fale com a minha equipe pelo WhatsApp: você tira suas dúvidas e recebe
+            as informações para agendar sua Sessão de Direção Terapêutica, sem o
             compromisso de continuidade.
           </p>
           <div className="mt-12 flex justify-center">
