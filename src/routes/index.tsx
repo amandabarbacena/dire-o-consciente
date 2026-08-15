@@ -504,7 +504,7 @@ function Index() {
             <p className="mt-8 text-[1.05rem] leading-[1.9] text-foreground/80">
               É uma entrega completa em si mesma: não é triagem, não é primeira
               sessão de terapia e não abre processo nenhum. Se você quiser seguir
-              depois, é escolha sua — nunca condição.
+              depois, é uma escolha sua nunca condição.
             </p>
             <div className="mt-10">
               <CTA id="cta-whatsapp-oferta">
