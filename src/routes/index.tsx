@@ -375,7 +375,7 @@ function Index() {
             Por que entender não bastou
           </p>
           <h2 className="mt-8 text-[1.8rem] leading-[1.3] md:text-[2.4rem]">
-            Você não precisa de mais informação sobre si. Precisa de instrução
+            Você não precisa de mais informação sobre si. Precisa de orientação
             para a hora exata em que o impulso aparece.
           </h2>
           <p className="mt-8 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
