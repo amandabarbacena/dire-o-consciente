@@ -12,16 +12,16 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Um encontro online de cerca de 60 minutos para sair com uma direção prática do que fazer quando o padrão se repete — com documento personalizado em até 48 horas.",
+          "Encontro online único de cerca de 60 minutos para entender por que tudo continua dependendo de você — e sair com uma direção prática por escrito em até 48 horas.",
       },
       {
         property: "og:title",
-        content: "Sessão de Direção Terapêutica | Amanda Barbacena",
+        content: "Você dá conta de tudo — e é exatamente esse o problema",
       },
       {
         property: "og:description",
         content:
-          "Você já entendeu muita coisa sobre si. Aqui você recebe uma direção prática para a hora em que o padrão aparece.",
+          "Sessão de Direção Terapêutica: um encontro clínico único, online, com mapeamento do seu padrão e direção prática registrada por escrito.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -59,77 +59,134 @@ function CTA({
   );
 }
 
-const microcopy = "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
+const microcopy =
+  "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
 
 const reconhecimento = [
   {
     n: "01",
-    d: "O dia termina, mas sua cabeça continua organizando o que precisa acontecer amanhã.",
+    d: "Você delega — e continua acompanhando, conferindo, lembrando e, no fim, refazendo.",
   },
   {
     n: "02",
-    d: "Você percebe o que pode dar errado antes de todo mundo — e começa a resolver antes mesmo de algo acontecer.",
+    d: "“Deixa que eu faço” sai da sua boca antes mesmo de você pensar. É mais rápido, é mais garantido, é menos desgastante do que esperar.",
   },
   {
     n: "03",
-    d: "Você delega, mas continua acompanhando, conferindo ou refazendo para garantir que fique como precisa ficar.",
+    d: "Você tem a sensação de que, se não for você, ninguém faz direito — e essa sensação vem acompanhada de cansaço e de culpa por pensar assim.",
   },
   {
     n: "04",
-    d: "Quando algo dá errado, a primeira coisa que aparece não é raiva: é a sensação de que era mais rápido ter feito sozinha.",
+    d: "Enquanto existe algo pendente, você não descansa por inteiro. O corpo para; a cabeça continua administrando.",
   },
   {
     n: "05",
-    d: "Você já leu, já ouviu, já entendeu. Mas na hora em que o padrão aparece, ele acontece de novo.",
+    d: "Você enxerga o que pode dar errado antes de todo mundo — e já começa a resolver antes que aconteça.",
+  },
+  {
+    n: "06",
+    d: "Você já entendeu o padrão. Já leu, já ouviu, já falou sobre isso. E, na hora em que ele aparece, ele acontece de novo.",
+  },
+];
+
+const hoje = [
+  "Mente em alerta o tempo todo",
+  "A sensação de que tudo depende de você",
+  "A necessidade de resolver antes de qualquer outra coisa",
+  "Microgestão do que já era responsabilidade de outra pessoa",
+  "Exaustão que não passa com folga nem com férias",
+];
+
+const caminho = [
+  "Distinguir com clareza o que realmente depende de você",
+  "Tolerar que o outro faça de outra maneira",
+  "Deixar que cada um lide com as próprias consequências",
+  "Escolher quando intervir, em vez de agir no automático",
+  "Usar o autoconhecimento sem ter que sustentar tudo e todos",
+];
+
+const entrega = [
+  {
+    n: "01",
+    t: "Como o seu ciclo de exaustão funciona",
+    d: "O que dispara, o que você faz em seguida e qual alívio imediato isso traz — o mecanismo, na sua realidade, não em teoria.",
+  },
+  {
+    n: "02",
+    t: "O que sustenta o padrão",
+    d: "Onde o controle entra como forma de evitar o desconforto de algo não sair do seu jeito, e como isso aumenta a carga em vez de diminuir.",
+  },
+  {
+    n: "03",
+    t: "O que observar e o que interromper",
+    d: "Os sinais concretos que antecedem o “deixa que eu faço” e o ponto exato em que dá para fazer diferente.",
+  },
+  {
+    n: "04",
+    t: "Por onde começar nos próximos dias",
+    d: "Uma direção prática, escrita para a sua rotina — não um conselho genérico.",
   },
 ];
 
 const passos = [
   {
     n: "01",
-    t: "Informações",
-    d: "Você fala com a nossa equipe pelo WhatsApp, tira suas dúvidas e recebe as informações para o agendamento.",
+    t: "WhatsApp",
+    d: "Você fala com a nossa equipe, tira dúvidas e recebe as informações para agendar.",
   },
   {
     n: "02",
     t: "Encontro",
-    d: "Em cerca de 60 minutos, fazemos a leitura da dificuldade concreta que você traz e o mapeamento do padrão que a mantém.",
+    d: "Cerca de 60 minutos, online e individual, com a leitura da dificuldade concreta e o mapeamento do padrão.",
   },
   {
     n: "03",
     t: "Direção por escrito",
-    d: "Em até 48 horas você recebe um documento personalizado com a síntese do encontro, os principais achados e os próximos passos.",
+    d: "Em até 48 horas chega o documento personalizado com a síntese, os achados e os próximos passos.",
   },
+];
+
+const paraQuem = [
+  "Você funciona bem por fora e está exausta por dentro.",
+  "Você quer parar de ser a central de controle da casa, da família e do trabalho.",
+  "Você já entende bastante sobre si e quer saber o que fazer com isso.",
+  "Você quer um encontro objetivo, com entrega concreta e sem compromisso de continuidade.",
+];
+
+const naoEhPara = [
+  "Quem procura atendimento de urgência ou situação de risco.",
+  "Quem quer um processo terapêutico contínuo agora — a SDT não é isso.",
+  "Quem espera uma solução pronta sem olhar para o próprio funcionamento.",
 ];
 
 const faq = [
   {
-    q: "Isso é uma primeira sessão de terapia?",
-    a: "Não. A SDT é um encontro único e completo em si mesmo, com objetivo e entrega próprios. Não inaugura um processo, não exige continuidade e não pressupõe acompanhamento.",
-  },
-  {
-    q: "Quanto tempo dura o encontro?",
-    a: "Cerca de 60 minutos, online, com horário combinado antes pelo WhatsApp.",
+    q: "Isso é terapia?",
+    a: "É um encontro clínico, conduzido por psicóloga, mas não é um processo de terapia. A SDT é única, tem objetivo definido e entrega própria: mapear um padrão específico e devolver uma direção prática por escrito. Não inaugura acompanhamento e não exige continuidade.",
   },
   {
     q: "E se eu já faço terapia?",
     a: "Sem problema. A SDT trabalha uma dificuldade pontual e não interfere no seu processo. Se quiser, você pode levar o documento para a sua terapeuta.",
   },
   {
-    q: "Como recebo as informações e agendo?",
-    a: "Pelo WhatsApp. Você fala com a nossa equipe, tira dúvidas, escolhe o horário e recebe tudo o que precisa antes do encontro.",
+    q: "Uma sessão resolve tudo?",
+    a: "Não. Ela mostra como o ciclo se forma na sua vida e o que fazer diferente quando ele aparecer. A mudança acontece quando você começa a agir de outro jeito na vida real — e é justamente para essa hora que a direção serve.",
   },
   {
-    q: "O que eu levo depois do encontro?",
-    a: "Um documento personalizado com a síntese do que foi trabalhado, os principais achados e orientações práticas para os próximos dias. É seu, para consultar quando o padrão aparecer.",
+    q: "Vou precisar contar minha vida toda?",
+    a: "Não. O encontro parte de uma dificuldade concreta que se repete no seu dia. A conversa vai até onde for necessário para entender o padrão que a mantém.",
+  },
+  {
+    q: "O documento é personalizado mesmo?",
+    a: "Sim. Ele é escrito depois do seu encontro, a partir do que foi trabalhado com você: síntese, principais achados e orientações práticas. Não existe modelo pronto.",
+  },
+  {
+    q: "Como agendo?",
+    a: "Pelo WhatsApp. Você fala com a nossa equipe, tira dúvidas, recebe as informações e escolhe o horário.",
   },
   {
     q: "E se eu quiser continuar depois?",
-    a: "A direção recebida já é suficiente para começar. Se fizer sentido continuar, isso pode ser conversado depois — mas nada aqui depende disso.",
-  },
-  {
-    q: "A SDT resolve tudo de uma vez?",
-    a: "Não. Ela mostra onde o padrão se sustenta e o que fazer diferente quando ele aparece. A mudança começa quando você consegue agir de outro jeito na vida real.",
+    a: "A direção recebida já é suficiente para começar. Se fizer sentido seguir, isso pode ser conversado depois — mas nada aqui depende disso.",
   },
 ];
 
@@ -141,20 +198,20 @@ function Index() {
         <div>
           <p className="eyebrow">Sessão de Direção Terapêutica</p>
           <h1 className="mt-8 text-[2.1rem] leading-[1.1] text-ink sm:text-[2.7rem] md:text-[3.2rem]">
-            Você já entendeu muita coisa sobre si.
+            Você dá conta de tudo.
             <span className="block italic text-accent">
-              Mas, na hora, ainda não sabe como fazer diferente.
+              O problema é que tudo continua dependendo de você.
             </span>
           </h1>
           <p className="mt-8 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
-            A Sessão de Direção Terapêutica é um encontro único e online. Em
-            cerca de 60 minutos, olhamos para a dificuldade concreta que se
-            repete no seu dia — e você sai com uma direção prática do que fazer
-            quando ela aparecer de novo.
+            A Sessão de Direção Terapêutica é um encontro online, único e
+            individual. Em cerca de 60 minutos, olhamos para o ciclo que mantém
+            você antecipando, monitorando e corrigindo tudo — e você sai sabendo
+            onde ele se forma e como começar a interrompê-lo.
           </p>
           <p className="mt-5 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
-            Em até 48 horas, você recebe tudo isso por escrito, em um documento
-            personalizado.
+            Em até 48 horas, essa direção chega por escrito, em um documento
+            personalizado para consultar na hora em que o padrão aparecer.
           </p>
           <div className="mt-10">
             <CTA id="cta-whatsapp-hero">
@@ -173,22 +230,31 @@ function Index() {
         />
       </section>
 
-      {/* SOBRECARGA */}
+      {/* A CENA DA EXAUSTÃO */}
       <section className="bg-sand">
         <div className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
-          <p className="eyebrow">A sobrecarga que não termina com o dia</p>
+          <p className="eyebrow">A exaustão que não termina com o dia</p>
           <h2 className="mt-8 text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-            Você funciona. Resolve. Continua. E não consegue descansar por
-            inteiro.
+            “Se eu não fizer, não acontece. E, se acontece, não fica do jeito que
+            precisa ficar.”
           </h2>
           <p className="mt-8 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Por fora, está tudo funcionando. O cansaço aparece quando ninguém
-            está olhando: pensando, revisando, antecipando, garantindo que nada
-            escape.
+            Você antecipa o que pode dar errado, monitora o que já delegou,
+            corrige o que voltou diferente e ainda executa o que sobrou. Por
+            fora, tudo funciona. Por dentro, a cabeça não desliga: às onze da
+            noite você ainda está organizando o amanhã de todo mundo.
+          </p>
+          <p className="mt-6 text-[1.05rem] leading-[1.9] text-foreground/80">
+            Essa dor é real, e as suas justificativas também são. As pessoas ao
+            seu redor de fato fazem diferente, demoram, esquecem. Só que existe
+            um mecanismo, muitas vezes sustentado por você sem perceber, que
+            mantém esse ciclo girando: evitar o mal-estar de algo não sair do
+            jeito que você precisa que saia.
           </p>
           <p className="mt-8 border-l border-accent/50 pl-6 text-[1.15rem] italic leading-[1.7] text-ink">
-            “O dia pode até terminar. Mas, dentro da sua cabeça, parece que nada
-            termina de verdade.”
+            “A sobrecarga não vem só da quantidade de coisas que você faz. Vem
+            também da microgestão invisível de tudo que você não conseguiu
+            largar.”
           </p>
         </div>
       </section>
@@ -201,7 +267,10 @@ function Index() {
         </h2>
         <ul className="mt-14 space-y-10">
           {reconhecimento.map((item) => (
-            <li key={item.n} className="grid gap-3 sm:grid-cols-[auto_1fr] sm:gap-8">
+            <li
+              key={item.n}
+              className="grid gap-3 sm:grid-cols-[auto_1fr] sm:gap-8"
+            >
               <span className="font-display text-2xl text-accent">{item.n}</span>
               <p className="text-[1.05rem] leading-[1.8] text-foreground/80">
                 {item.d}
@@ -211,62 +280,145 @@ function Index() {
         </ul>
       </section>
 
-      {/* MECANISMO */}
+      {/* POR QUE ENTENDER NÃO BASTOU */}
       <section className="bg-ink text-ink-foreground">
         <div className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
           <p className="eyebrow text-ink-foreground/60">
-            Você não precisa de mais informação
+            Por que entender não bastou
           </p>
           <h2 className="mt-8 text-[1.8rem] leading-[1.3] md:text-[2.4rem]">
-            Precisa de uma direção que funcione justamente na hora em que o
-            padrão se repete.
+            Você não precisa de mais informação sobre si. Precisa de instrução
+            para a hora exata em que o impulso aparece.
           </h2>
           <p className="mt-8 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            Entender por que a sobrecarga acontece já é parte do caminho. Mas a
-            parte mais difícil vem depois: reconhecer o padrão enquanto ele
-            acontece e conseguir responder de outro jeito.
+            Você já leu, já ouviu podcast, já conversou com quem te conhece bem.
+            Talvez já tenha falado disso em terapia. E, mesmo assim, quando a
+            situação chega, o corpo age antes: você confere, corrige, assume.
           </p>
           <p className="mt-6 text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            É por isso que compreender o padrão é importante, mas não basta. A
-            mudança começa quando você consegue ver a direção do que observar,
-            interromper e começar a fazer diferente na vida real.
+            A distância entre entender e fazer diferente não se fecha com mais
+            explicação. Ela se fecha quando alguém traduz o seu padrão em uma
+            direção concreta: o que observar, onde interromper e o que fazer no
+            lugar. É exatamente isso que a SDT entrega — em um único encontro,
+            com objetivo definido e entrega registrada.
           </p>
         </div>
       </section>
 
-      {/* A SDT */}
-      <section className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
-        <p className="eyebrow">Sessão de Direção Terapêutica</p>
-        <h2 className="mt-8 text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-          Uma direção clara para começar a agir diferente na vida real.
+      {/* DESEJO — HOJE / O CAMINHO */}
+      <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
+        <p className="eyebrow">O que você quer de verdade</p>
+        <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
+          Continuar sendo responsável e competente — sem precisar sustentar tudo
+          para sentir que vai funcionar.
         </h2>
-        <p className="mt-8 text-[1.05rem] leading-[1.9] text-foreground/80">
-          A SDT é um encontro único e completo em si mesmo, pensado para
-          transformar o que você já percebe sobre si em uma direção prática que
-          dá para aplicar no seu dia.
-        </p>
 
-        <div className="mt-14 space-y-12">
+        <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-16">
           <div>
-            <p className="eyebrow">01 Durante o encontro</p>
-            <p className="mt-4 text-[1.05rem] leading-[1.8] text-foreground/80">
-              Em cerca de 60 minutos, fazemos a leitura da dificuldade concreta
-              que você traz e o mapeamento do padrão envolvido: o que dispara, o
-              que você faz em seguida e o que acaba mantendo a situação como
-              está.
-            </p>
+            <p className="eyebrow">Hoje</p>
+            <ul className="mt-6 space-y-4">
+              {hoje.map((item) => (
+                <li
+                  key={item}
+                  className="border-b border-border pb-4 text-[1.02rem] leading-[1.7] text-muted-foreground"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
           <div>
-            <p className="eyebrow">02 Em até 48 horas</p>
-            <p className="mt-4 text-[1.05rem] leading-[1.8] text-foreground/80">
-              Você recebe um documento personalizado com a síntese do que foi
-              trabalhado, os principais achados e orientações práticas. Dá para
-              voltar nele sempre que precisar — inclusive meses depois.
-            </p>
+            <p className="eyebrow text-accent">O caminho</p>
+            <ul className="mt-6 space-y-4">
+              {caminho.map((item) => (
+                <li
+                  key={item}
+                  className="border-b border-accent/30 pb-4 text-[1.02rem] leading-[1.7] text-ink"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="mt-14">
+        <p className="mt-14 max-w-2xl border-l border-accent/50 pl-6 text-[1.05rem] leading-[1.8] text-foreground/80">
+          Sendo honesta com você: esse caminho inteiro não acontece em uma
+          sessão. A SDT entrega o primeiro passo concreto dele — identificar como
+          o ciclo funciona na sua vida e começar a interrompê-lo.
+        </p>
+      </section>
+
+      {/* A OFERTA */}
+      <section className="bg-sand">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:gap-20 md:px-10 md:py-32">
+          <div>
+            <p className="eyebrow">O que é a Sessão de Direção Terapêutica</p>
+            <h2 className="mt-6 text-[1.8rem] leading-[1.25] text-ink md:text-[2.3rem]">
+              Um encontro clínico individual com entrega em mãos.
+            </h2>
+            <ul className="mt-10 space-y-6">
+              <li className="text-[1.05rem] leading-[1.8] text-foreground/80">
+                <span className="font-medium text-ink">
+                  Encontro único de cerca de 60 minutos,
+                </span>{" "}
+                online e individual, conduzido por psicóloga.
+              </li>
+              <li className="text-[1.05rem] leading-[1.8] text-foreground/80">
+                <span className="font-medium text-ink">
+                  Mapeamento do seu padrão,
+                </span>{" "}
+                a partir de uma dificuldade concreta que se repete no seu dia.
+              </li>
+              <li className="text-[1.05rem] leading-[1.8] text-foreground/80">
+                <span className="font-medium text-ink">
+                  Direção prática registrada por escrito,
+                </span>{" "}
+                em até 48 horas, em um documento personalizado que fica com você.
+              </li>
+            </ul>
+            <p className="mt-8 text-[1.05rem] leading-[1.9] text-foreground/80">
+              É uma entrega completa em si mesma: não é triagem, não é primeira
+              sessão de terapia e não abre processo nenhum. Se você quiser seguir
+              depois, é escolha sua — nunca condição.
+            </p>
+            <div className="mt-10">
+              <CTA id="cta-whatsapp-oferta">
+                Quero agendar minha Sessão de Direção Terapêutica
+              </CTA>
+              <p className="mt-6 text-sm text-muted-foreground">{microcopy}</p>
+            </div>
+          </div>
+
+          <img
+            src={notesStill}
+            alt="Caderno aberto com caneta sobre mesa de linho ao lado de um vaso com eucalipto"
+            width={1408}
+            height={1008}
+            loading="lazy"
+            className="h-[300px] w-full rounded-[2rem] object-cover md:h-[520px]"
+          />
+        </div>
+      </section>
+
+      {/* O QUE VOCÊ LEVA */}
+      <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
+        <p className="eyebrow">O que você leva do encontro</p>
+        <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
+          Clareza sobre o mecanismo — e o que fazer quando ele aparecer.
+        </h2>
+        <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-x-16">
+          {entrega.map((item) => (
+            <div key={item.n}>
+              <span className="font-display text-2xl text-accent">{item.n}</span>
+              <h3 className="mt-3 text-xl leading-snug text-ink">{item.t}</h3>
+              <p className="mt-3 text-[1rem] leading-[1.8] text-muted-foreground">
+                {item.d}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-16">
           <CTA id="cta-whatsapp-middle">
             Quero agendar minha Sessão de Direção Terapêutica
           </CTA>
@@ -274,52 +426,60 @@ function Index() {
         </div>
       </section>
 
-      {/* DOCUMENTO / ENTREGA COMPLETA */}
+      {/* COMO FUNCIONA */}
       <section className="bg-sand">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:gap-20 md:px-10 md:py-28">
-          <img
-            src={notesStill}
-            alt="Caderno aberto com caneta sobre mesa de linho ao lado de um vaso com eucalipto"
-            width={1408}
-            height={1008}
-            loading="lazy"
-            className="h-[280px] w-full rounded-[2rem] object-cover md:h-[420px]"
-          />
-          <div>
-            <p className="eyebrow">Uma entrega completa em si mesma</p>
-            <h2 className="mt-6 text-[1.7rem] leading-[1.25] text-ink md:text-[2.2rem]">
-              A SDT faz sentido mesmo que nada venha depois.
-            </h2>
-            <p className="mt-6 text-[1.05rem] leading-[1.9] text-foreground/80">
-              Não é uma triagem, não é uma primeira sessão de terapia e não abre
-              um processo. É um encontro com começo, meio e fim — e uma entrega
-              que fica com você.
-            </p>
-            <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
-              Ao final, você sai sabendo o que observar, o que interromper e por
-              onde começar. Se quiser seguir depois, isso é escolha sua — nunca
-              condição.
-            </p>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
+          <p className="eyebrow">Como funciona</p>
+          <h2 className="mt-8 text-[1.8rem] leading-[1.2] text-ink md:text-[2.4rem]">
+            Três passos simples.
+          </h2>
+          <div className="mt-16 grid gap-14 md:grid-cols-3">
+            {passos.map((p) => (
+              <div key={p.n}>
+                <span className="font-display text-3xl text-accent">{p.n}</span>
+                <h3 className="mt-4 text-xl text-ink">{p.t}</h3>
+                <p className="mt-3 text-[1rem] leading-[1.8] text-muted-foreground">
+                  {p.d}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* COMO FUNCIONA */}
-      <section className="mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
-        <p className="eyebrow">Como funciona</p>
-        <h2 className="mt-8 text-[1.8rem] leading-[1.2] text-ink md:text-[2.4rem]">
-          Três passos simples.
+      {/* PARA QUEM É / NÃO É */}
+      <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
+        <p className="eyebrow">Para quem é</p>
+        <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.3rem]">
+          A SDT foi desenhada para um momento específico.
         </h2>
-        <div className="mt-16 grid gap-14 md:grid-cols-3">
-          {passos.map((p) => (
-            <div key={p.n}>
-              <span className="font-display text-3xl text-accent">{p.n}</span>
-              <h3 className="mt-4 text-xl text-ink">{p.t}</h3>
-              <p className="mt-3 text-[1rem] leading-[1.8] text-muted-foreground">
-                {p.d}
-              </p>
-            </div>
-          ))}
+        <div className="mt-14 grid gap-12 md:grid-cols-2 md:gap-16">
+          <div>
+            <p className="eyebrow text-accent">Faz sentido se</p>
+            <ul className="mt-6 space-y-4">
+              {paraQuem.map((item) => (
+                <li
+                  key={item}
+                  className="border-b border-accent/30 pb-4 text-[1.02rem] leading-[1.7] text-ink"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="eyebrow">Não é para</p>
+            <ul className="mt-6 space-y-4">
+              {naoEhPara.map((item) => (
+                <li
+                  key={item}
+                  className="border-b border-border pb-4 text-[1.02rem] leading-[1.7] text-muted-foreground"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -340,15 +500,16 @@ function Index() {
             <span className="block italic text-accent">CRP 01/26914</span>
           </h2>
           <p className="mt-6 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Sou psicóloga clínica e atendo mulheres adultas que dão conta de
-            tudo — e que, por isso mesmo, raramente param para olhar para o
-            próprio funcionamento.
+            Sou psicóloga clínica e atendo mulheres adultas que gerenciam tudo —
+            casa, trabalho, família — e que, por isso mesmo, raramente param para
+            olhar para o próprio funcionamento.
           </p>
           <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
             Antes da Psicologia, construí carreira no ambiente corporativo,
-            inclusive em gestão. Formação em Relações Internacionais e MBA pela
-            FGV. Trabalho com abordagens comportamentais e cognitivas e prática
-            baseada em evidências.
+            inclusive em gestão. Conheço por dentro a lógica de quem responde por
+            resultado e sente que precisa garantir tudo. Formação em Relações
+            Internacionais e MBA pela FGV. Trabalho com abordagens comportamentais
+            e cognitivas e prática baseada em evidências.
           </p>
         </div>
       </section>
@@ -380,13 +541,12 @@ function Index() {
             Uma direção para fazer diferente
           </p>
           <h2 className="mt-8 text-[1.9rem] leading-[1.2] md:text-[2.7rem]">
-            Você já entendeu o padrão. Agora precisa saber como agir quando ele
-            aparece.
+            Você não precisa continuar sendo a central de controle de tudo.
           </h2>
           <p className="mx-auto mt-8 max-w-md text-[1.05rem] leading-[1.9] text-ink-foreground/70">
-            Se esse é o seu momento, fale com a nossa equipe pelo WhatsApp. Você
-            tira suas dúvidas e recebe as informações para agendar sua Sessão de
-            Direção Terapêutica — sem compromisso de continuidade.
+            Fale com a nossa equipe pelo WhatsApp: você tira suas dúvidas e recebe
+            as informações para agendar sua Sessão de Direção Terapêutica — sem
+            compromisso de continuidade.
           </p>
           <div className="mt-12 flex justify-center">
             <CTA id="cta-whatsapp-final" variant="light">
@@ -398,7 +558,10 @@ function Index() {
       </section>
 
       <footer className="mx-auto max-w-3xl px-6 py-14 pb-28 text-center text-sm leading-relaxed text-muted-foreground md:px-10 md:pb-14">
-        <p>Amanda Barbacena — Psicóloga clínica · CRP 01/26914 · Atendimento online.</p>
+        <p>
+          Amanda Barbacena — Psicóloga clínica · CRP 01/26914 · Atendimento
+          online.
+        </p>
         <p className="mt-3">
           Atenção: este site e o WhatsApp de agendamento não oferecem atendimento
           imediato em situações de emergência. Em caso de risco, ligue para o CVV
