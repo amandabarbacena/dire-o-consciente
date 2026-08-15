@@ -89,7 +89,7 @@ const reconhecimento = [
   },
   {
     n: "05",
-    d: "Você enxerga o que pode dar errado antes de todo mundo — e já começa a resolver antes que aconteça.",
+    d: 'Você antecipa o que "pode dar errado" e já começa a resolver antes mesmo que aconteça.',
   },
   {
     n: "06",
