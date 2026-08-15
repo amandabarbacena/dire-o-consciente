@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroWoman from "@/assets/hero-woman.jpg";
+import heroOverwhelm from "@/assets/hero-overwhelm.jpg";
 import notesStill from "@/assets/notes-still.jpg";
 import amandaPortrait from "@/assets/amanda-portrait.jpg";
 import { whatsappUrl } from "@/config/site";
@@ -195,7 +195,10 @@ function Index() {
       {/* HERO */}
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 pt-16 pb-20 md:grid-cols-2 md:gap-20 md:px-10 md:pt-28 md:pb-28">
         <div>
-          <p className="eyebrow">Sessão de Direção Terapêutica</p>
+          <p className="text-[0.75rem] uppercase tracking-[0.18em] text-muted-foreground">
+            Amanda Barbacena <span className="mx-1.5">·</span> Psicóloga de mulheres
+          </p>
+          <p className="eyebrow mt-5">Sessão de Direção Terapêutica</p>
           <h1 className="mt-8 text-[2.1rem] leading-[1.1] text-ink sm:text-[2.7rem] md:text-[3.2rem]">
             Você dá conta de tudo.
             <span className="block italic text-accent">
@@ -221,8 +224,8 @@ function Index() {
         </div>
 
         <img
-          src={heroWoman}
-          alt="Mulher sentada junto à janela, com uma xícara nas mãos, em um momento de pausa"
+          src={heroOverwhelm}
+          alt="Mulher exausta à mesa de trabalho, com laptop, caderno e xícara, em luz suave de manhã"
           width={1280}
           height={1600}
           className="h-[420px] w-full rounded-[2rem] object-cover md:h-[620px]"
