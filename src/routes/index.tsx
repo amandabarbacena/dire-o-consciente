@@ -60,7 +60,7 @@ function CTA({
 }
 
 const microcopy =
-  "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
+  "online · ~60 min · documento com direção por escrito em até 48h";
 
 const reconhecimento = [
   {
