@@ -327,25 +327,46 @@ function Index() {
 
 
       {/* RECONHECIMENTO */}
-      <section className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
-        <p className="eyebrow">Talvez você se reconheça aqui</p>
-        <h2 className="mt-8 text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-          O dia termina, mas você nunca descansa.
-        </h2>
-        <ul className="mt-14 space-y-10">
-          {reconhecimento.map((item) => (
-            <li
-              key={item.n}
-              className="grid gap-3 sm:grid-cols-[auto_1fr] sm:gap-8"
-            >
-              <span className="font-display text-2xl text-accent">{item.n}</span>
-              <p className="text-[1.05rem] leading-[1.8] text-foreground/80">
-                {item.d}
+      <section className="relative overflow-hidden border-y border-ink/10 bg-[color-mix(in_oklab,var(--color-accent)_7%,var(--color-background))]">
+        <div className="pointer-events-none absolute -right-24 top-16 hidden h-72 w-72 rounded-full border border-ink/10 md:block" />
+        <div className="pointer-events-none absolute -left-32 bottom-0 hidden h-96 w-96 rounded-full border border-ink/[0.07] md:block" />
+
+        <div className="relative mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-36">
+          <div className="grid gap-14 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:gap-20">
+            {/* Coluna fixa */}
+            <div className="md:sticky md:top-24 md:self-start">
+              <p className="eyebrow">Talvez você se reconheça aqui</p>
+              <h2 className="mt-8 text-[1.9rem] leading-[1.2] text-ink md:text-[2.6rem]">
+                O dia termina, mas você nunca descansa.
+              </h2>
+              <div className="mt-8 h-px w-16 bg-accent/60" />
+              <p className="mt-8 max-w-sm text-[0.98rem] leading-[1.9] text-foreground/60">
+                Seis situações que se repetem. Se três delas parecerem escritas
+                sobre a sua semana, a Sessão de Direção Terapêutica foi pensada
+                para você.
               </p>
-            </li>
-          ))}
-        </ul>
+            </div>
+
+            {/* Lista editorial */}
+            <ul className="divide-y divide-ink/10 border-t border-ink/10">
+              {reconhecimento.map((item) => (
+                <li
+                  key={item.n}
+                  className="group grid grid-cols-[auto_1fr] items-baseline gap-6 py-7 transition-colors duration-500 hover:bg-background/70 md:gap-10 md:py-9"
+                >
+                  <span className="font-display text-[1.6rem] leading-none text-accent/50 transition-colors duration-500 group-hover:text-accent md:text-[2rem]">
+                    {item.n}
+                  </span>
+                  <p className="text-[1.02rem] leading-[1.85] text-foreground/80 transition-colors duration-500 group-hover:text-ink md:text-[1.1rem]">
+                    {item.d}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
+
 
       {/* POR QUE ENTENDER NÃO BASTOU */}
       <section className="bg-ink text-ink-foreground">
