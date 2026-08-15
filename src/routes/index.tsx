@@ -117,7 +117,7 @@ const entrega = [
   {
     n: "01",
     t: "Como o seu ciclo de exaustão funciona",
-    d: "O que dispara, o que você faz em seguida e qual alívio imediato isso traz — o mecanismo, na sua realidade, não em teoria.",
+    d: "O que dispara, o que você faz em seguida e qual alívio imediato isso traz. O mecanismo, na sua realidade, não em teoria.",
   },
   {
     n: "02",
