@@ -61,6 +61,15 @@ function CTA({
 
 const microcopy = "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
 
+const cenaDoDia: { hora: string; texto: string }[] = [
+  { hora: "06:40", texto: "Você acorda já revisando mentalmente o dia de todo mundo." },
+  { hora: "10:15", texto: "Delega uma tarefa e, dez minutos depois, checa se saiu como você precisa." },
+  { hora: "14:30", texto: "Refaz o que voltou diferente. É mais rápido do que explicar de novo." },
+  { hora: "19:00", texto: "Em casa, começa o segundo turno: o que ninguém viu que precisava ser feito." },
+  { hora: "23:10", texto: "O corpo para. A cabeça continua organizando o amanhã." },
+];
+
+
 const reconhecimento = [
   {
     n: "01",
