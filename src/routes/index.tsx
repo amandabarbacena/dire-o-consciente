@@ -6,7 +6,14 @@ import { whatsappUrl } from "@/config/site";
 import { Reveal } from "@/components/Reveal";
 import { Disclosure } from "@/components/Disclosure";
 
+function openWhatsApp(event: React.MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault();
+  window.open(whatsappUrl, "_blank");
+}
+
+
 export const Route = createFileRoute("/")({
+
   component: Index,
   head: () => ({
     meta: [
@@ -56,6 +63,7 @@ function CTA({
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={openWhatsApp}
       className={`${base} ${styles}`}
     >
       <span className="relative z-10">{children}</span>
@@ -66,6 +74,7 @@ function CTA({
     </a>
   );
 }
+
 
 const microcopy = "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
 
@@ -246,10 +255,12 @@ function Index() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={openWhatsApp}
             className="hidden shrink-0 rounded-full border border-ink/20 px-5 py-2 text-[0.78rem] tracking-wide text-ink transition-colors hover:border-ink/60 md:inline-flex"
           >
             Agendar SDT
           </a>
+
         </div>
       </header>
 
@@ -826,10 +837,12 @@ function Index() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={openWhatsApp}
           className="flex min-h-12 w-full items-center justify-center rounded-full bg-ink text-[0.95rem] font-medium text-ink-foreground"
         >
           Agendar no WhatsApp
         </a>
+
       </div>
     </main>
   );
