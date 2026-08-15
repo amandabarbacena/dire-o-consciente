@@ -140,7 +140,7 @@ const passos = [
   {
     n: "01",
     t: "WhatsApp",
-    d: "Você fala com a nossa equipe, tira dúvidas e recebe as informações para agendar.",
+    d: "Você fala com a minha equipe, tira dúvidas e recebe as informações para agendar.",
   },
   {
     n: "02",
