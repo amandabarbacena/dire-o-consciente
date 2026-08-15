@@ -421,7 +421,7 @@ function Index() {
           <CTA id="cta-whatsapp-middle">
             Quero agendar minha Sessão de Direção Terapêutica
           </CTA>
-          <p className="mt-6 text-xs whitespace-nowrap text-muted-foreground">{microcopy}</p>
+          <p className="mt-6 text-[0.6rem] whitespace-nowrap text-muted-foreground sm:text-[0.72rem]">{microcopy}</p>
         </div>
       </section>
 
