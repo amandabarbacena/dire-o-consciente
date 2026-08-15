@@ -85,7 +85,7 @@ const reconhecimento = [
   },
   {
     n: "04",
-    d: "Enquanto existe algo pendente, você não descansa por inteiro. O corpo para; a cabeça continua administrando.",
+    d: "Enquanto existe algo pendente, você não descansa por inteiro. O corpo até para mas a cabeça continua administrando.",
   },
   {
     n: "05",
