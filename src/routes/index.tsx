@@ -145,7 +145,7 @@ const passos = [
   {
     n: "02",
     t: "Encontro",
-    d: "Cerca de 60 minutos, online e individual, com a leitura da dificuldade concreta e o mapeamento do padrão.",
+    d: "Cerca de 60 minutos, online e individual. Identificamos o ciclo, compreendemos como ele funciona e traçamos o que fazer para interrompê-lo.",
   },
   {
     n: "03",
