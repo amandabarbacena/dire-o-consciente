@@ -6,6 +6,12 @@ import { whatsappUrl } from "@/config/site";
 import { Reveal } from "@/components/Reveal";
 import { Disclosure } from "@/components/Disclosure";
 
+function openWhatsApp(event: React.MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault();
+  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+}
+
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
