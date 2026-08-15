@@ -254,10 +254,12 @@ function Index() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={openWhatsApp}
             className="hidden shrink-0 rounded-full border border-ink/20 px-5 py-2 text-[0.78rem] tracking-wide text-ink transition-colors hover:border-ink/60 md:inline-flex"
           >
             Agendar SDT
           </a>
+
         </div>
       </header>
 
