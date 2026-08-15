@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroWoman from "@/assets/hero-woman.jpg";
+import heroOverwhelm from "@/assets/hero-overwhelm.jpg";
 import notesStill from "@/assets/notes-still.jpg";
 import amandaPortrait from "@/assets/amanda-portrait.jpg";
 import { whatsappUrl } from "@/config/site";
