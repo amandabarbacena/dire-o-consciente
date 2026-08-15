@@ -177,7 +177,7 @@ const faq = [
   },
   {
     q: "Uma sessão resolve tudo?",
-    a: "Não. Ela mostra como o ciclo se forma na sua vida e o que fazer diferente quando ele aparecer. A mudança acontece quando você começa a agir de outro jeito na vida real — e é justamente para essa hora que a direção serve.",
+    a: "Não. Ela mostra como o ciclo de exasutão aparece na sua vida e o que fazer diferente quando ele aparecer. A mudança acontece quando você começa a agir de outro jeito na vida real. E é justamente para essa hora que a direção serve.",
   },
   {
     q: "Vou precisar contar minha vida toda?",
