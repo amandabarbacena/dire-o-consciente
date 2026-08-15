@@ -820,7 +820,7 @@ function Index() {
               <SectionLabel tone="dark">Uma direção para fazer diferente</SectionLabel>
             </div>
             <h2 className="mt-8 text-[1.9rem] leading-[1.2] md:text-[2.7rem]">
-              Direção não é abrir mão do controle. É escolher onde ele importa.
+              Existe um jeito de dar conta do que importa, sem carregar tudo sozinha.
             </h2>
             <p className="mx-auto mt-8 max-w-md text-[1.05rem] leading-[1.9] text-ink-foreground/70">
               Fale com a minha equipe pelo WhatsApp: você tira suas dúvidas e recebe
