@@ -260,7 +260,7 @@ function Index() {
             <div>
               <h2 className="text-[1.8rem] leading-[1.25] text-ink md:text-[2.6rem]">
                 <span className="text-accent">“</span>Se eu não fizer, ninguém
-                faze. E, se faz, não fica do jeito que eu quero.
+                faz. E, se faz, não fica do jeito que eu quero.
                 <span className="text-accent">”</span>
               </h2>
 
