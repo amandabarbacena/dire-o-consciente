@@ -11,8 +11,8 @@ function openWhatsApp(event: React.MouseEvent<HTMLAnchorElement>) {
   window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 }
 
-
 export const Route = createFileRoute("/")({
+
   component: Index,
   head: () => ({
     meta: [
