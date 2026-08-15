@@ -193,7 +193,7 @@ const faq = [
   },
   {
     q: "E se eu quiser continuar depois?",
-    a: "A direção recebida já é suficiente para começar. Se fizer sentido seguir, isso pode ser conversado depois — mas nada aqui depende disso.",
+    a: "A direção recebida já é suficiente para começar. Se fizer sentido seguir, isso pode ser conversado depois, mas nada aqui depende disso.",
   },
 ];
 
