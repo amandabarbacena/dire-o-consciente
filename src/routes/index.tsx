@@ -387,7 +387,7 @@ function Index() {
             A distância entre entender e fazer diferente não se fecha com mais
             explicação. Ela se fecha quando alguém traduz o seu padrão em uma
             direção concreta: o que observar, onde interromper e o que fazer no
-            lugar. É exatamente isso que a SDT entrega — em um único encontro,
+            lugar. É exatamente isso que a SDT entrega em um único encontro,
             com objetivo definido e entrega registrada.
           </p>
         </div>
