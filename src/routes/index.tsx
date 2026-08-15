@@ -425,9 +425,6 @@ function Index() {
                 sobre a sua semana, a Sessão de Direção Terapêutica foi pensada
                 para você.
               </p>
-              <p className="mt-6 text-[0.78rem] uppercase tracking-[0.18em] text-muted-foreground">
-                Toque para abrir cada uma
-              </p>
             </Reveal>
 
             <Reveal delay={100}>
