@@ -163,7 +163,6 @@ const paraQuem = [
 
 const naoEhPara = [
   "Quem procura atendimento de urgência ou situação de risco.",
-  "Quem quer um processo terapêutico contínuo agora — a SDT não é isso.",
   "Quem espera uma solução pronta sem olhar para o próprio funcionamento.",
 ];
 
