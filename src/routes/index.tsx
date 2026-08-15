@@ -752,13 +752,25 @@ function Index() {
               loading="lazy"
               className="relative h-[480px] w-full rounded-[2rem] object-cover object-top md:h-[600px]"
             />
-            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-border bg-background/85 px-5 py-4 backdrop-blur md:right-auto md:max-w-[15rem]">
-              <p className="eyebrow">Psicóloga clínica</p>
-              <p className="mt-1.5 font-display text-[1.35rem] leading-tight text-ink">
-                Amanda Barbacena
-              </p>
-            </div>
+            <figcaption className="mt-6 flex items-start gap-5 border-t border-ink/15 pt-5">
+              <span
+                aria-hidden
+                className="mt-1 h-10 w-px shrink-0 bg-accent/50"
+              />
+              <div>
+                <p className="font-display text-[1.4rem] leading-tight text-ink">
+                  Amanda Barbacena
+                </p>
+                <p className="mt-1 text-[0.95rem] leading-relaxed text-muted-foreground">
+                  Psicóloga clínica · CRP 01/26914
+                </p>
+                <p className="mt-1 text-[0.9rem] leading-relaxed text-muted-foreground">
+                  Abordagens cognitivas e comportamentais
+                </p>
+              </div>
+            </figcaption>
           </Reveal>
+
           <Reveal delay={120}>
             <SectionLabel>Quem conduzirá seu encontro</SectionLabel>
             <h2 className="mt-6 text-[1.8rem] leading-[1.2] text-ink md:text-[2.3rem]">
