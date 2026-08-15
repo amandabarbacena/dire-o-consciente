@@ -432,7 +432,7 @@ function Index() {
 
         <p className="mt-14 max-w-2xl border-l border-accent/50 pl-6 text-[1.05rem] leading-[1.8] text-foreground/80">
           Sendo honesta com você: esse caminho inteiro não acontece em uma
-          sessão. A SDT entrega o primeiro passo concreto dele — identificar como
+          sessão. A SDT entrega o primeiro passo concreto dele: identificar como
           o ciclo funciona na sua vida e começar a interrompê-lo.
         </p>
       </section>
