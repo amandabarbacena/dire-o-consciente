@@ -330,7 +330,7 @@ function Index() {
       <section className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
         <p className="eyebrow">Talvez você se reconheça aqui</p>
         <h2 className="mt-8 text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-          O dia termina, mas sua mente continua trabalhando.
+          O dia termina, mas você nunca descansa.
         </h2>
         <ul className="mt-14 space-y-10">
           {reconhecimento.map((item) => (
