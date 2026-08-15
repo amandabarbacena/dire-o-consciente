@@ -233,33 +233,89 @@ function Index() {
       </section>
 
       {/* A CENA DA EXAUSTÃO */}
-      <section className="bg-sand">
-        <div className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
+      <section className="relative overflow-hidden bg-sand">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-accent/20"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full border border-accent/15"
+        />
+
+        <div className="relative mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
           <p className="eyebrow">A EXAUSTÃO QUE NUNCA TERMINA</p>
-          <h2 className="mt-8 text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-            “Se eu não fizer, não acontece. E, se acontece, não fica do jeito que
-            precisa ficar.”
-          </h2>
-          <p className="mt-8 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Você antecipa o que pode dar errado, monitora o que já delegou,
-            corrige o que voltou diferente e ainda executa o que sobrou. Por
-            fora, tudo funciona. Por dentro, a cabeça não desliga: às onze da
-            noite você ainda está organizando o amanhã de todo mundo.
-          </p>
-          <p className="mt-6 text-[1.05rem] leading-[1.9] text-foreground/80">
-            Essa dor é real, e as suas justificativas também são. As pessoas ao
-            seu redor de fato fazem diferente, demoram, esquecem. Só que existe
-            um mecanismo, muitas vezes sustentado por você sem perceber, que
-            mantém esse ciclo girando: evitar o mal-estar de algo não sair do
-            jeito que você precisa que saia.
-          </p>
-          <p className="mt-8 border-l border-accent/50 pl-6 text-[1.15rem] italic leading-[1.7] text-ink">
-            “A sobrecarga não vem só da quantidade de coisas que você faz. Vem
-            também da microgestão invisível de tudo que você não conseguiu
-            largar.”
-          </p>
+
+          <div className="mt-10 grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:gap-20">
+            {/* Coluna esquerda: fala + texto */}
+            <div>
+              <h2 className="text-[1.8rem] leading-[1.25] text-ink md:text-[2.6rem]">
+                <span className="text-accent">“</span>Se eu não fizer, não
+                acontece. E, se acontece, não fica do jeito que precisa ficar.
+                <span className="text-accent">”</span>
+              </h2>
+
+              <p className="mt-8 text-[1.05rem] leading-[1.9] text-foreground/80">
+                Você antecipa o que pode dar errado, monitora o que já delegou,
+                corrige o que voltou diferente e ainda executa o que sobrou. Por
+                fora, tudo funciona. Por dentro, a cabeça não desliga: às onze
+                da noite você ainda está organizando o amanhã de todo mundo.
+              </p>
+
+              <div className="mt-10 rounded-[1.5rem] border border-accent/20 bg-background/70 p-7 backdrop-blur-sm">
+                <p className="eyebrow">O que quase ninguém enxerga</p>
+                <p className="mt-4 text-[1.05rem] leading-[1.9] text-foreground/80">
+                  Essa dor é real, e as suas justificativas também são. As
+                  pessoas ao seu redor de fato fazem diferente, demoram,
+                  esquecem. Só que existe um mecanismo, muitas vezes sustentado
+                  por você sem perceber, que mantém esse ciclo girando:{" "}
+                  <span className="text-ink">
+                    evitar o mal-estar de algo não sair do jeito que você
+                    precisa que saia.
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            {/* Coluna direita: o dia em ciclo */}
+            <div className="md:pt-4">
+              <div className="rounded-[2rem] bg-ink p-8 text-ink-foreground md:p-10">
+                <p className="eyebrow text-ink-foreground/60">
+                  Um dia qualquer
+                </p>
+                <ul className="mt-8 space-y-7">
+                  {cenaDoDia.map((item, i) => (
+                    <li key={item.hora} className="relative flex gap-5">
+                      <span className="w-14 shrink-0 pt-[0.15rem] font-sans text-xs tracking-[0.14em] text-ink-foreground/50">
+                        {item.hora}
+                      </span>
+                      <span className="relative flex flex-col items-center">
+                        <span className="mt-[0.45rem] h-2 w-2 rounded-full bg-clay" />
+                        {i < cenaDoDia.length - 1 && (
+                          <span className="mt-2 w-px flex-1 bg-ink-foreground/20" />
+                        )}
+                      </span>
+                      <span className="text-[0.98rem] leading-[1.7] text-ink-foreground/85">
+                        {item.texto}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-9 border-t border-ink-foreground/15 pt-6 text-xs tracking-[0.16em] uppercase text-ink-foreground/55">
+                  Amanhã, de novo.
+                </p>
+              </div>
+
+              <p className="mt-10 border-l-2 border-clay pl-6 text-[1.15rem] italic leading-[1.7] text-ink">
+                “A sobrecarga não vem só da quantidade de coisas que você faz.
+                Vem também da microgestão invisível de tudo que você não
+                conseguiu largar.”
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* RECONHECIMENTO */}
       <section className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
