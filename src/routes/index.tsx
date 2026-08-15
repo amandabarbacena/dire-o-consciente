@@ -231,6 +231,10 @@ const faq = [
     a: "Sim. Ele é escrito depois do seu encontro, a partir do que foi trabalhado com você: síntese, principais achados e orientações práticas. Não existe modelo pronto.",
   },
   {
+    q: "Qual o investimento?",
+    a: "O valor é apresentado quando você conversa com minha equipe pelo WhatsApp, junto com as opções de horário. Prefiro fazer assim para te passar todas as informações de uma vez, sem meia informação.",
+  },
+  {
     q: "Como agendo?",
     a: "Pelo WhatsApp. Você fala com a minha equipe, tira dúvidas, recebe as informações e escolhe o horário.",
   },
@@ -273,6 +277,10 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-14 pb-20 md:grid-cols-[1.05fr_0.95fr] md:gap-20 md:px-10 md:pt-24 md:pb-28">
           <Reveal>
             <SectionLabel>Sessão de Direção Terapêutica</SectionLabel>
+            <p className="mt-4 text-[0.75rem] uppercase tracking-[0.18em] text-muted-foreground">
+              CRP 01/26914 <span className="mx-1 text-accent">·</span> Direção
+              estratégica para mulheres que carregam tudo sozinhas
+            </p>
             <h1 className="mt-8 text-[2.1rem] leading-[1.08] text-ink sm:text-[2.7rem] md:text-[3.35rem]">
               Você dá conta de tudo.
               <span className="mt-2 block italic text-accent">
