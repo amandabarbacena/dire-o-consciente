@@ -59,7 +59,7 @@ function CTA({
   );
 }
 
-const microcopy = "online ·\u00a0 60 min · documento em até 48h";
+const microcopy = "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
 
 const reconhecimento = [
   {
@@ -217,7 +217,7 @@ function Index() {
               Quero agendar minha Sessão de Direção Terapêutica
             </CTA>
           </div>
-          <p className="mt-6 text-xs whitespace-nowrap text-muted-foreground">{microcopy}</p>
+          <p className="mt-6 text-[0.6rem] whitespace-nowrap text-muted-foreground sm:text-[0.72rem]">{microcopy}</p>
         </div>
 
         <img
@@ -385,7 +385,7 @@ function Index() {
               <CTA id="cta-whatsapp-oferta">
                 Quero agendar minha Sessão de Direção Terapêutica
               </CTA>
-              <p className="mt-6 text-xs whitespace-nowrap text-muted-foreground">{microcopy}</p>
+              <p className="mt-6 text-[0.6rem] whitespace-nowrap text-muted-foreground sm:text-[0.72rem]">{microcopy}</p>
             </div>
           </div>
 
@@ -421,7 +421,7 @@ function Index() {
           <CTA id="cta-whatsapp-middle">
             Quero agendar minha Sessão de Direção Terapêutica
           </CTA>
-          <p className="mt-6 text-xs whitespace-nowrap text-muted-foreground">{microcopy}</p>
+          <p className="mt-6 text-[0.6rem] whitespace-nowrap text-muted-foreground sm:text-[0.72rem]">{microcopy}</p>
         </div>
       </section>
 
@@ -552,7 +552,7 @@ function Index() {
               Quero agendar minha Sessão de Direção Terapêutica
             </CTA>
           </div>
-          <p className="mt-6 text-xs whitespace-nowrap text-ink-foreground/60">{microcopy}</p>
+          <p className="mt-6 text-[0.6rem] whitespace-nowrap text-ink-foreground/60 sm:text-[0.72rem]">{microcopy}</p>
         </div>
       </section>
 
