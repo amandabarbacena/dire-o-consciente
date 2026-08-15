@@ -199,7 +199,7 @@ const passos = [
 
 const paraQuem = [
   "Você funciona bem por fora e está exausta por dentro.",
-  "Você quer parar de ser a central de controle da casa, da família e do trabalho.",
+  "Você não quer mais ser a única pessoa que dá conta de tudo.",
   "Você já entende bastante sobre si e quer saber o que fazer com isso.",
   "Você quer um encontro objetivo, com entrega concreta e sem compromisso de continuidade.",
 ];
@@ -220,7 +220,7 @@ const faq = [
   },
   {
     q: "Uma sessão resolve tudo?",
-    a: "Não. Ela mostra como o ciclo de exasutão aparece na sua vida e o que fazer diferente quando ele aparecer. A mudança acontece quando você começa a agir de outro jeito na vida real. E é justamente para essa hora que a direção serve.",
+    a: "Não. Ela mostra como o ciclo de exaustão aparece na sua vida e o que fazer diferente quando ele aparecer. A mudança acontece quando você começa a agir de outro jeito na vida real. E é justamente para essa hora que a direção serve.",
   },
   {
     q: "Vou precisar contar minha vida toda?",
@@ -798,7 +798,7 @@ function Index() {
               <SectionLabel tone="dark">Uma direção para fazer diferente</SectionLabel>
             </div>
             <h2 className="mt-8 text-[1.9rem] leading-[1.2] md:text-[2.7rem]">
-              Você não precisa continuar sendo a central de controle de tudo.
+              Direção não é abrir mão do controle. É escolher onde ele importa.
             </h2>
             <p className="mx-auto mt-8 max-w-md text-[1.05rem] leading-[1.9] text-ink-foreground/70">
               Fale com a minha equipe pelo WhatsApp: você tira suas dúvidas e recebe
