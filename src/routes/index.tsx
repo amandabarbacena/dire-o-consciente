@@ -251,7 +251,10 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-3.5 md:px-10">
           <p className="min-w-0 truncate text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
-            Amanda Barbacena <span className="mx-1 text-accent">·</span> Psicóloga de mulheres
+            <span className="hidden sm:inline">
+              Amanda Barbacena <span className="mx-1 text-accent">·</span>
+            </span>
+            Psicóloga de mulheres
           </p>
           <a
             id="cta-whatsapp-header"
@@ -277,9 +280,10 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-14 pb-20 md:grid-cols-[1.05fr_0.95fr] md:gap-20 md:px-10 md:pt-24 md:pb-28">
           <Reveal>
             <SectionLabel>Sessão de Direção Terapêutica</SectionLabel>
-            <p className="mt-4 text-[0.75rem] uppercase tracking-[0.18em] text-muted-foreground">
-              CRP 01/26914 <span className="mx-1 text-accent">·</span> Direção
-              estratégica para mulheres que carregam tudo sozinhas
+            <p className="mt-5 inline-block max-w-xs rounded-xl border border-border/70 bg-card/70 px-4 py-2 text-[0.68rem] normal-case leading-snug tracking-normal text-muted-foreground sm:max-w-sm">
+              <span className="font-medium text-foreground">CRP 01/26914</span>
+              <span className="mx-1.5 text-accent">·</span>
+              Direção estratégica para mulheres que carregam tudo sozinhas
             </p>
             <h1 className="mt-8 text-[2.1rem] leading-[1.08] text-ink sm:text-[2.7rem] md:text-[3.35rem]">
               Você dá conta de tudo.
