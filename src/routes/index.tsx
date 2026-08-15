@@ -59,8 +59,7 @@ function CTA({
   );
 }
 
-const microcopy =
-  "online · ~60 min · documento com direção por escrito em até 48h";
+const microcopy = "online · ~60 min · documento em até 48h";
 
 const reconhecimento = [
   {
