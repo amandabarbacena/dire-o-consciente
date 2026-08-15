@@ -22,20 +22,19 @@ Isso indica que o bloqueio é causado pelo ambiente de preview do Lovable (que r
 
 ## O que vamos fazer
 
-Tornar o redirecionamento do WhatsApp mais robusto no preview e manter a experiência de conversão intacta no ambiente publicado.
+Tornar o redirecionamento do WhatsApp mais robusto no preview, mantendo a página limpa (sem exibir o número) e a experiência de conversão intacta no ambiente publicado.
 
-1. **Revisar o componente CTA** em `src/routes/index.tsx` e alterar a abertura do link para usar `window.open(whatsappUrl, "_blank", "noopener,noreferrer")` via `onClick`. Isso reduz a chance de o navegador tratar a navegação como parte do iframe de preview.
-2. **Manter o `<a href>`** como fallback semântico, acessível e indexável, mas com `onClick` tomando o controle da navegação no cliente.
+1. **Revisar o componente CTA** em `src/routes/index.tsx` e adicionar um `onClick` que abra o link via `window.open(whatsappUrl, "_blank", "noopener,noreferrer")`. Isso reduz a chance de o navegador tratar a navegação como parte do iframe de preview.
+2. **Manter o `<a href>`** como fallback semântico e acessível, sem exibir o número do WhatsApp na interface.
 3. **Garantir que todos os CTAs da página** usem o componente centralizado (`CTA`), verificando se há algum link hardcoded.
-4. **Adicionar um fallback visual** (número do WhatsApp em texto pequeno) nos locais principais de conversão, para que, se o link for bloqueado no preview, a lead ainda consiga copiar o número e iniciar o contato.
-5. **Validar no preview** se o novo comportamento resolve o bloqueio ou se é necessário testar a URL alternativa `https://api.whatsapp.com/send?phone=...`.
+4. **Validar no preview** se o novo comportamento resolve o bloqueio ou se é necessário testar a URL alternativa `https://api.whatsapp.com/send?phone=...`.
 
 ## Resultado esperado
 
 - O botão continua abrindo o WhatsApp quando possível.
-- Se o preview do Lovable bloquear a navegação, o usuário ainda tem o número visível para copiar.
+- O número do WhatsApp não aparece visualmente na página.
 - A landing page publicada permanece convertendo normalmente via `wa.me`.
 
 ## Decisão
 
-Aprovar a correção para que eu possa aplicar a mudança no componente CTA e adicionar o fallback de número.
+Aprovar a correção para que eu possa aplicar a mudança no componente CTA.
