@@ -302,12 +302,6 @@ function Index() {
               height={1600}
               className="relative h-[420px] w-full rounded-[2rem] object-cover md:h-[620px]"
             />
-            <div className="absolute -bottom-6 left-4 right-4 rounded-2xl border border-border bg-background/90 px-5 py-4 backdrop-blur md:left-8 md:right-auto md:max-w-[16rem]">
-              <p className="eyebrow">Entrega</p>
-              <p className="mt-2 text-[0.95rem] leading-snug text-ink">
-                Documento personalizado em até 48 horas.
-              </p>
-            </div>
           </Reveal>
         </div>
       </section>
