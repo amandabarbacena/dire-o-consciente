@@ -8,8 +8,9 @@ import { Disclosure } from "@/components/Disclosure";
 
 function openWhatsApp(event: React.MouseEvent<HTMLAnchorElement>) {
   event.preventDefault();
-  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  window.open(whatsappUrl, "_blank");
 }
+
 
 export const Route = createFileRoute("/")({
 
