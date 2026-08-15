@@ -73,7 +73,7 @@ const cenaDoDia: { hora: string; texto: string }[] = [
 const reconhecimento = [
   {
     n: "01",
-    d: "Você delega — e continua acompanhando, conferindo, lembrando e, no fim, refazendo.",
+    d: "Você até delega mas continua acompanhando, conferindo, lembrando e, no fim, refazendo.",
   },
   {
     n: "02",
