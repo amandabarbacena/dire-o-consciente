@@ -430,11 +430,47 @@ function Index() {
           </div>
         </div>
 
-        <p className="mt-14 max-w-2xl border-l border-accent/50 pl-6 text-[1.05rem] leading-[1.8] text-foreground/80">
-          Sendo honesta com você: esse caminho inteiro não acontece em uma
-          sessão. A SDT entrega o primeiro passo concreto dele: identificar como
-          o ciclo funciona na sua vida e começar a interrompê-lo.
-        </p>
+        {/* HONESTIDADE — NOTA EDITORIAL */}
+        <div className="relative mx-auto mt-24 max-w-2xl md:mt-32">
+          <div className="absolute -top-8 -left-8 hidden h-24 w-24 border-t border-l border-accent/40 sm:block" />
+          <div className="absolute -bottom-8 -right-8 hidden h-24 w-24 border-b border-r border-accent/40 sm:block" />
+
+          <div className="relative border border-border bg-card/50 p-8 shadow-sm backdrop-blur-sm sm:p-16">
+            <header className="mb-8">
+              <span className="mb-4 block text-[10px] font-semibold uppercase tracking-widest text-accent">
+                Nota de Transparência
+              </span>
+              <h2 className="font-display text-[2.4rem] leading-[1.1] italic text-ink sm:text-[3rem]">
+                Sendo honesta com você:
+              </h2>
+            </header>
+
+            <div className="space-y-6">
+              <p className="text-[1.1rem] font-light leading-relaxed text-foreground sm:text-[1.25rem]">
+                Esse caminho inteiro não acontece em uma sessão.
+              </p>
+
+              <div className="flex items-start gap-6">
+                <div className="mt-4 h-[1px] w-12 flex-shrink-0 bg-accent" />
+                <p className="text-[1.05rem] font-normal leading-relaxed text-foreground sm:text-[1.2rem]">
+                  A SDT entrega o{" "}
+                  <span className="font-display text-[1.5rem] italic text-accent">
+                    primeiro passo concreto
+                  </span>{" "}
+                  dele: identificar como o ciclo funciona na sua vida e começar a
+                  interrompê-lo.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 flex items-center justify-between border-t border-border pt-8">
+              <div className="text-[10px] uppercase tracking-tighter text-muted-foreground">
+                Direção Terapêutica
+              </div>
+              <div className="h-2 w-2 rounded-full bg-accent" />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* A OFERTA */}
