@@ -189,7 +189,7 @@ const faq = [
   },
   {
     q: "Como agendo?",
-    a: "Pelo WhatsApp. Você fala com a nossa equipe, tira dúvidas, recebe as informações e escolhe o horário.",
+    a: "Pelo WhatsApp. Você fala com a minha equipe, tira dúvidas, recebe as informações e escolhe o horário.",
   },
   {
     q: "E se eu quiser continuar depois?",
