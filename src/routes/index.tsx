@@ -132,7 +132,7 @@ const entrega = [
   {
     n: "04",
     t: "Por onde começar nos próximos dias",
-    d: "Uma direção prática, escrita para a sua rotina — não um conselho genérico.",
+    d: "Uma direção prática, escrita para a sua rotina e não um conselho genérico.",
   },
 ];
 
