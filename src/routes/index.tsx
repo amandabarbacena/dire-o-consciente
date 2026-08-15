@@ -139,7 +139,7 @@ const entrega = [
 const passos = [
   {
     n: "01",
-    t: "WhatsApp",
+    t: "Informações",
     d: "Você fala com a minha equipe, tira dúvidas e recebe as informações para agendar.",
   },
   {
