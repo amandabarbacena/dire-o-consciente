@@ -529,7 +529,7 @@ function Index() {
       <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
         <p className="eyebrow">O que você leva do encontro</p>
         <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
-          Clareza sobre o mecanismo — e o que fazer quando ele aparecer.
+          Clareza sobre o mecanismo e o que fazer quando ele aparecer.
         </h2>
         <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-x-16">
           {entrega.map((item) => (
