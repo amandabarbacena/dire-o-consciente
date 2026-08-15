@@ -235,7 +235,7 @@ function Index() {
       {/* A CENA DA EXAUSTÃO */}
       <section className="bg-sand">
         <div className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
-          <p className="eyebrow">A exaustão que não termina com o dia</p>
+          <p className="eyebrow">A EXAUSTÃO QUE NUNCA TERMINA</p>
           <h2 className="mt-8 text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
             “Se eu não fizer, não acontece. E, se acontece, não fica do jeito que
             precisa ficar.”
