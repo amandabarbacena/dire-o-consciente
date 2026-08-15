@@ -835,18 +835,18 @@ function Index() {
         </div>
       </section>
 
-      <footer className="mx-auto max-w-3xl px-6 py-14 pb-28 text-center text-sm leading-relaxed text-muted-foreground md:px-10 md:pb-14">
+      <footer className="mx-auto max-w-3xl px-6 py-7 pb-24 text-center text-xs leading-relaxed text-muted-foreground/80 md:px-10 md:pb-8">
         <p>
           Amanda Barbacena — Psicóloga clínica · CRP 01/26914 · Atendimento
           online.
         </p>
-        <p className="mt-3">
+        <p className="mt-1.5">
           Atenção: este site e o WhatsApp de agendamento não oferecem atendimento
           imediato em situações de emergência. Em caso de risco, ligue para o CVV
           (188). Em caso de emergência, procure o hospital mais próximo ou o SAMU
           (192).
         </p>
-        <p className="mt-3">© 2026 Amanda Barbacena</p>
+        <p className="mt-1.5">© 2026 Amanda Barbacena</p>
       </footer>
 
       {/* CTA fixo mobile */}
