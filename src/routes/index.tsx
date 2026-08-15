@@ -62,6 +62,7 @@ function CTA({
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={openWhatsApp}
       className={`${base} ${styles}`}
     >
       <span className="relative z-10">{children}</span>
@@ -72,6 +73,7 @@ function CTA({
     </a>
   );
 }
+
 
 const microcopy = "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
 
