@@ -836,10 +836,12 @@ function Index() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={openWhatsApp}
           className="flex min-h-12 w-full items-center justify-center rounded-full bg-ink text-[0.95rem] font-medium text-ink-foreground"
         >
           Agendar no WhatsApp
         </a>
+
       </div>
     </main>
   );
