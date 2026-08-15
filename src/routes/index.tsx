@@ -218,7 +218,7 @@ function Index() {
               Quero agendar minha Sessão de Direção Terapêutica
             </CTA>
           </div>
-          <p className="mt-6 text-sm text-muted-foreground">{microcopy}</p>
+          <p className="mt-6 text-xs whitespace-nowrap text-muted-foreground">{microcopy}</p>
         </div>
 
         <img
