@@ -254,7 +254,7 @@ function Index() {
             <span className="hidden sm:inline">
               Amanda Barbacena <span className="mx-1 text-accent">·</span>
             </span>
-            Psicóloga de mulheres
+            Psicóloga de mulheres <span className="mx-1 text-accent">·</span> CRP 01/26914
           </p>
           <a
             id="cta-whatsapp-header"
@@ -280,12 +280,10 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-14 pb-20 md:grid-cols-[1.05fr_0.95fr] md:gap-20 md:px-10 md:pt-24 md:pb-28">
           <Reveal>
             <SectionLabel>Sessão de Direção Terapêutica</SectionLabel>
-            <p className="mt-5 inline-block max-w-xs rounded-xl border border-border/70 bg-card/70 px-4 py-2 text-[0.68rem] normal-case leading-snug tracking-normal text-muted-foreground sm:max-w-sm">
-              <span className="font-medium text-foreground">CRP 01/26914</span>
-              <span className="mx-1.5 text-accent">·</span>
-              Direção estratégica para mulheres que carregam tudo sozinhas
+            <p className="mt-4 max-w-sm font-display text-[1.15rem] italic leading-snug text-muted-foreground">
+              Direção estratégica para mulheres que carregam tudo sozinhas.
             </p>
-            <h1 className="mt-8 text-[2.1rem] leading-[1.08] text-ink sm:text-[2.7rem] md:text-[3.35rem]">
+            <h1 className="mt-7 text-[2.1rem] leading-[1.08] text-ink sm:text-[2.7rem] md:text-[3.35rem]">
               Você dá conta de tudo.
               <span className="mt-2 block italic text-accent">
                 O problema é que tudo continua dependendo de você.
