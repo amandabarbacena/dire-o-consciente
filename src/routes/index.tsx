@@ -3,6 +3,7 @@ import heroOverwhelm from "@/assets/hero-overwhelm.jpg";
 import notesStill from "@/assets/notes-still.jpg";
 import amandaAsset from "@/assets/amanda-barbacena.jpg.asset.json";
 import { whatsappUrl } from "@/config/site";
+import { Instagram } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Disclosure } from "@/components/Disclosure";
 
@@ -836,7 +837,18 @@ function Index() {
       </section>
 
       <footer className="mx-auto max-w-3xl px-6 py-7 pb-24 text-center text-xs leading-relaxed text-muted-foreground/80 md:px-10 md:pb-8">
-        <p>
+        <div className="flex justify-center">
+          <a
+            href="https://www.instagram.com/amanda.barbacena/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Amanda Barbacena"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-accent hover:text-accent"
+          >
+            <Instagram className="h-4 w-4" strokeWidth={1.75} />
+          </a>
+        </div>
+        <p className="mt-5">
           Atenção: este site e o WhatsApp de agendamento não oferecem atendimento
           imediato em situações de emergência. Em caso de risco, ligue para o CVV
           (188). Em caso de emergência, procure o hospital mais próximo ou o SAMU
