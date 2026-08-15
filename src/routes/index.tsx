@@ -377,11 +377,9 @@ function Index() {
                   Essa dor é real, e as suas justificativas também são. As
                   pessoas ao seu redor de fato fazem diferente, demoram,
                   esquecem. Só que existe um mecanismo, muitas vezes sustentado
-                  por você sem perceber, que mantém esse ciclo girando:{" "}
-                  <span className="text-ink">
-                    evitar o mal-estar de algo não sair do jeito que você
-                    precisa que saia.
-                  </span>
+                  por você sem perceber, que mantém esse ciclo girando. A SDT
+                  existe pra mapear esse mecanismo na sua rotina e te dar o
+                  próximo passo pra interrompê-lo.
                 </p>
               </div>
             </Reveal>
