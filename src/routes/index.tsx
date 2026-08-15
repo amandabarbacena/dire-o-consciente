@@ -205,8 +205,8 @@ function Index() {
           <p className="mt-8 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
             A Sessão de Direção Terapêutica é um encontro online, único e
             individual. Em cerca de 60 minutos, olhamos para o ciclo que mantém
-            você antecipando, monitorando e corrigindo tudo — e você sai sabendo
-            onde ele se forma e como começar a interrompê-lo.
+            você antecipando, monitorando e corrigindo tudo. Você sai sabendo
+            como ele funciona e como começar a interrompê-lo.
           </p>
           <p className="mt-5 max-w-md text-[1.08rem] leading-[1.8] text-muted-foreground">
             Em até 48 horas, essa direção chega por escrito, em um documento
