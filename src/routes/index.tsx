@@ -93,7 +93,7 @@ const reconhecimento = [
   },
   {
     n: "06",
-    d: "Você já entendeu o padrão. Já leu, já ouviu, já falou sobre isso. E, na hora em que ele aparece, ele acontece de novo.",
+    d: "Você já entendeu o ciclo. Já leu, já ouviu, já falou sobre isso. E, na hora em que ele aparece, você segue fazendo tudo igual.",
   },
 ];
 
