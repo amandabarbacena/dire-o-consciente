@@ -67,10 +67,10 @@ function CTA({
       onClick={openWhatsApp}
       className={`${base} ${styles}`}
     >
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 pointer-events-none">{children}</span>
       <span
         aria-hidden
-        className="relative z-10 h-px w-5 shrink-0 bg-current transition-all duration-300 group-hover:w-8"
+        className="relative z-10 h-px w-5 shrink-0 bg-current transition-all duration-300 group-hover:w-8 pointer-events-none"
       />
     </a>
   );
