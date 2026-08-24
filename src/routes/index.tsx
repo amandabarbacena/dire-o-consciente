@@ -266,7 +266,7 @@ function Index() {
             onClick={openWhatsApp}
             className="hidden shrink-0 rounded-full border border-ink/20 px-5 py-2 text-[0.78rem] tracking-wide text-ink transition-colors hover:border-ink/60 md:inline-flex"
           >
-            Agendar SDT
+            Tirar dúvidas
           </a>
 
         </div>
@@ -302,7 +302,7 @@ function Index() {
             </p>
             <div className="mt-10">
               <CTA id="cta-whatsapp-hero">
-                Quero agendar minha Sessão de Direção Terapêutica
+                Quero saber como funciona
               </CTA>
             </div>
             <Micro />
@@ -610,7 +610,7 @@ function Index() {
             </p>
             <div className="mt-10">
               <CTA id="cta-whatsapp-oferta">
-                Quero agendar minha Sessão de Direção Terapêutica
+                Quero saber como funciona
               </CTA>
               <Micro />
             </div>
@@ -658,7 +658,7 @@ function Index() {
         </div>
         <Reveal className="mt-16 block">
           <CTA id="cta-whatsapp-middle">
-            Quero agendar minha Sessão de Direção Terapêutica
+            Quero saber como funciona
           </CTA>
           <Micro />
         </Reveal>
@@ -768,6 +768,9 @@ function Index() {
                 <p className="mt-1 text-[0.9rem] leading-relaxed text-muted-foreground">
                   Abordagens cognitivas e comportamentais
                 </p>
+                <p className="mt-3 text-[0.9rem] leading-relaxed text-accent">
+                  +1.500 sessões conduzidas ao longo da minha atuação clínica, com foco em mulheres em sobrecarga emocional.
+                </p>
               </div>
             </figcaption>
           </Reveal>
@@ -785,6 +788,19 @@ function Index() {
             </p>
             <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
               Antes da psicologia, trabalhei durante anos em uma grande instituição financeira, inclusive em posição de gestão. Essa trajetória ampliou meu repertório sobre contextos de alta responsabilidade, cobrança, desempenho e tomada de decisão, hoje integrado à minha experiência clínica com mulheres.
+            </p>
+
+            <h3 className="mt-10 text-[1.3rem] leading-[1.3] text-ink">
+              Por que atendo apenas mulheres
+            </h3>
+            <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
+              Quem cuida de quem cuida?
+            </p>
+            <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
+              Historicamente, boa parte do que sabemos sobre saúde, física e mental, foi construído tendo o corpo e a experiência masculina como padrão. As mulheres foram, por muito tempo, uma nota de rodapé nessa pesquisa. E isso não fica só nos livros: se reflete em quão pouco se entende, na prática clínica, sobre a sobrecarga específica de viver segurando casa, trabalho, filhos e as expectativas de todo mundo ao seu redor.
+            </p>
+            <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
+              Eu vivo isso também. E foi essa vivência, somada à minha atuação clínica, que me fez escolher olhar exclusivamente para mulheres, com a atenção que esse recorte pede. Entender esse padrão de sobrecarga exige mais do que técnica: exige entender o contexto social, cultural e histórico que o sustenta.
             </p>
           </Reveal>
         </div>
@@ -828,9 +844,12 @@ function Index() {
             </p>
             <div className="mt-12 flex justify-center">
               <CTA id="cta-whatsapp-final" variant="light">
-                Quero agendar minha Sessão de Direção Terapêutica
+                Quero saber como funciona
               </CTA>
             </div>
+            <p className="mt-4 text-[0.85rem] text-ink-foreground/60">
+              Primeiro você tira suas dúvidas, depois decide. Sem compromisso.
+            </p>
             <Micro tone="dark" />
           </Reveal>
         </div>
@@ -868,7 +887,7 @@ function Index() {
           onClick={openWhatsApp}
           className="flex min-h-12 w-full items-center justify-center rounded-full bg-ink text-[0.95rem] font-medium text-ink-foreground"
         >
-          Agendar no WhatsApp
+          Conversar no WhatsApp
         </a>
 
       </div>
