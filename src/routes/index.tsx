@@ -77,12 +77,12 @@ function CTA({
 }
 
 
-const microcopy = "Encontro online · Cerca de 60 minutos · Plano de ação no seu WhatsApp em até 48h";
+const microcopy = "Encontro online · Cerca de 60 minutos · Plano de ação no WhatsApp em até 48h";
 
 function Micro({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
     <p
-      className={`mt-6 text-[0.6rem] whitespace-nowrap sm:text-[0.72rem] ${
+      className={`mt-6 text-[0.68rem] leading-relaxed sm:whitespace-nowrap sm:text-[0.72rem] ${
         tone === "dark" ? "text-ink-foreground/60" : "text-muted-foreground"
       }`}
     >
@@ -266,7 +266,7 @@ function Index() {
             onClick={openWhatsApp}
             className="hidden shrink-0 rounded-full border border-ink/20 px-5 py-2 text-[0.78rem] tracking-wide text-ink transition-colors hover:border-ink/60 md:inline-flex"
           >
-            Tirar dúvidas
+            Conhecer a SDT
           </a>
 
         </div>
