@@ -77,7 +77,7 @@ function CTA({
 }
 
 
-const microcopy = "Encontro online · Cerca de 60 minutos · Direção por escrito em até 48 horas";
+const microcopy = "Encontro online · Cerca de 60 minutos · Plano de ação no seu WhatsApp em até 48h";
 
 function Micro({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
@@ -765,10 +765,7 @@ function Index() {
                 <p className="mt-1 text-[0.95rem] leading-relaxed text-muted-foreground">
                   Psicóloga clínica · CRP 01/26914
                 </p>
-                <p className="mt-1 text-[0.9rem] leading-relaxed text-muted-foreground">
-                  Abordagens cognitivas e comportamentais
-                </p>
-                <p className="mt-3 text-[0.9rem] leading-relaxed text-accent">
+                <p className="mt-4 text-[0.9rem] leading-relaxed text-accent">
                   +1.500 sessões conduzidas ao longo da minha atuação clínica, com foco em mulheres em sobrecarga emocional.
                 </p>
               </div>
@@ -790,7 +787,7 @@ function Index() {
               Antes da psicologia, trabalhei durante anos em uma grande instituição financeira, inclusive em posição de gestão. Essa trajetória ampliou meu repertório sobre contextos de alta responsabilidade, cobrança, desempenho e tomada de decisão, hoje integrado à minha experiência clínica com mulheres.
             </p>
 
-            <h3 className="mt-10 text-[1.3rem] leading-[1.3] text-ink">
+            <h3 className="mt-10 text-[1.8rem] leading-[1.2] text-ink md:text-[2.3rem]">
               Por que atendo apenas mulheres
             </h3>
             <p className="mt-5 text-[1.05rem] leading-[1.9] text-foreground/80">
