@@ -82,7 +82,7 @@ const microcopy = "Encontro online · Cerca de 60 minutos · Plano de ação no 
 function Micro({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
     <p
-      className={`mt-6 text-[0.68rem] leading-relaxed sm:whitespace-nowrap sm:text-[0.72rem] ${
+      className={`mt-6 text-center text-[0.68rem] leading-relaxed sm:whitespace-nowrap sm:text-left sm:text-[0.72rem] ${
         tone === "dark" ? "text-ink-foreground/60" : "text-muted-foreground"
       }`}
     >
@@ -847,7 +847,6 @@ function Index() {
             <p className="mt-4 text-[0.85rem] text-ink-foreground/60">
               Primeiro você tira suas dúvidas, depois decide. Sem compromisso.
             </p>
-            <Micro tone="dark" />
           </Reveal>
         </div>
       </section>
