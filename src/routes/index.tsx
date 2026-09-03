@@ -6,6 +6,7 @@ import { whatsappUrl } from "@/config/site";
 import { Instagram } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Disclosure } from "@/components/Disclosure";
+import { ReconhecimentoChecklist } from "@/components/ReconhecimentoChecklist";
 
 function openWhatsApp(event: React.MouseEvent<HTMLAnchorElement>) {
   event.preventDefault();
@@ -435,25 +436,14 @@ function Index() {
               </h2>
               <div className="mt-8 h-px w-16 bg-accent/60" />
               <p className="mt-8 max-w-sm text-[0.98rem] leading-[1.9] text-foreground/60">
-                Seis situações que se repetem. Se três delas parecerem escritas
-                sobre a sua semana, a Sessão de Direção Terapêutica foi pensada
-                para você.
+                Seis situações que se repetem. Marque as que parecerem
+                escritas sobre a sua semana — se forem três ou mais, a
+                Sessão de Direção Terapêutica foi pensada para você.
               </p>
             </Reveal>
 
             <Reveal delay={100}>
-              <div className="border-t border-ink/12">
-                {reconhecimento.map((item, i) => (
-                  <Disclosure
-                    key={item.n}
-                    index={item.n}
-                    label={item.t}
-                    defaultOpen={i === 0}
-                  >
-                    {item.d}
-                  </Disclosure>
-                ))}
-              </div>
+              <ReconhecimentoChecklist items={reconhecimento} />
             </Reveal>
           </div>
         </div>
