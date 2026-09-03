@@ -354,7 +354,7 @@ function Index() {
           className="pointer-events-none absolute -bottom-32 -left-20 h-80 w-80 rounded-full border border-accent/15"
         />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
+        <div className="relative mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <Reveal>
             <SectionLabel>A exaustão que nunca termina</SectionLabel>
           </Reveal>
@@ -448,7 +448,7 @@ function Index() {
         <div className="pointer-events-none absolute -right-24 top-16 hidden h-72 w-72 rounded-full border border-ink/10 md:block" />
         <div className="pointer-events-none absolute -left-32 bottom-0 hidden h-96 w-96 rounded-full border border-ink/[0.07] md:block" />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-36">
+        <div className="relative mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-24">
           <div className="grid gap-14 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:gap-20">
             <Reveal className="md:sticky md:top-28 md:self-start">
               <SectionLabel>Talvez você se reconheça aqui</SectionLabel>
@@ -476,7 +476,7 @@ function Index() {
           aria-hidden
           className="pointer-events-none absolute -left-20 top-1/2 h-[26rem] w-[26rem] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,color-mix(in_oklab,var(--color-clay)_18%,transparent),transparent_70%)]"
         />
-        <div className="relative mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
+        <div className="relative mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-20">
           <Reveal>
             <SectionLabel tone="dark">Por que entender não bastou</SectionLabel>
             <h2 className="mt-8 text-[1.8rem] leading-[1.3] md:text-[2.4rem]">
@@ -500,7 +500,7 @@ function Index() {
       </section>
 
       {/* DESEJO — HOJE / O CAMINHO */}
-      <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
+      <section className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-20">
         <Reveal>
           <SectionLabel>O que você quer de verdade</SectionLabel>
           <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
@@ -588,7 +588,7 @@ function Index() {
 
       {/* A OFERTA */}
       <section className="bg-sand">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2 md:gap-20 md:px-10 md:py-32">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:px-10 md:py-20">
           <Reveal>
             <SectionLabel>O que é a Sessão de Direção Terapêutica</SectionLabel>
             <h2 className="mt-6 text-[1.8rem] leading-[1.25] text-ink md:text-[2.3rem]">
@@ -645,7 +645,7 @@ function Index() {
       </section>
 
       {/* O QUE VOCÊ LEVA */}
-      <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
+      <section className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-20">
         <Reveal>
           <SectionLabel>O que você leva do encontro</SectionLabel>
           <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.4rem]">
@@ -677,7 +677,7 @@ function Index() {
 
       {/* COMO FUNCIONA */}
       <section className="bg-sand">
-        <div className="mx-auto max-w-6xl px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-20">
           <Reveal>
             <SectionLabel>Como funciona</SectionLabel>
             <h2 className="mt-8 text-[1.8rem] leading-[1.2] text-ink md:text-[2.4rem]">
@@ -709,7 +709,7 @@ function Index() {
       </section>
 
       {/* PARA QUEM É / NÃO É */}
-      <section className="mx-auto max-w-5xl px-6 py-24 md:px-10 md:py-32">
+      <section className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-20">
         <Reveal>
           <SectionLabel>Para quem é</SectionLabel>
           <h2 className="mt-8 max-w-2xl text-[1.8rem] leading-[1.25] text-ink md:text-[2.3rem]">
@@ -750,7 +750,7 @@ function Index() {
 
       {/* AUTORIDADE */}
       <section className="border-y border-ink/10 bg-sand">
-        <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 md:grid-cols-[0.85fr_1fr] md:gap-20 md:px-10 md:py-32">
+        <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 md:grid-cols-[0.85fr_1fr] md:gap-20 md:px-10 md:py-20">
           <Reveal className="relative">
             <div
               aria-hidden
@@ -815,7 +815,7 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="mx-auto max-w-3xl px-6 py-24 md:px-10 md:py-32">
+      <section className="mx-auto max-w-3xl px-6 py-16 md:px-10 md:py-20">
         <Reveal>
           <SectionLabel>Dúvidas frequentes</SectionLabel>
           <h2 className="mt-8 text-[1.8rem] leading-[1.2] text-ink md:text-[2.3rem]">
@@ -837,7 +837,7 @@ function Index() {
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_55%_at_50%_0%,color-mix(in_oklab,var(--color-clay)_16%,transparent),transparent)]"
         />
-        <div className="relative mx-auto max-w-2xl px-6 py-24 text-center md:px-10 md:py-32">
+        <div className="relative mx-auto max-w-2xl px-6 py-16 text-center md:px-10 md:py-20">
           <Reveal>
             <div className="flex justify-center">
               <SectionLabel tone="dark">Uma direção para fazer diferente</SectionLabel>
