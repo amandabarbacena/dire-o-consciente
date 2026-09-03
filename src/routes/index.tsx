@@ -253,12 +253,22 @@ function Index() {
       {/* HEADER */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-3.5 md:px-10">
-          <p className="min-w-0 truncate text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
-            <span className="hidden sm:inline">
-              Amanda Barbacena <span className="mx-1 text-accent">·</span>
-            </span>
-            Psicóloga de mulheres <span className="mx-1 text-accent">·</span> CRP 01/26914
-          </p>
+          <div className="flex min-w-0 items-center gap-3">
+            <img
+              src={amandaAsset.url}
+              alt="Amanda Barbacena"
+              width={64}
+              height={64}
+              loading="eager"
+              className="h-8 w-8 shrink-0 rounded-full object-cover object-top ring-1 ring-ink/10"
+            />
+            <p className="min-w-0 truncate text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
+              <span className="hidden sm:inline">
+                Amanda Barbacena <span className="mx-1 text-accent">·</span>
+              </span>
+              Psicóloga de mulheres <span className="mx-1 text-accent">·</span> CRP 01/26914
+            </p>
+          </div>
           <a
             id="cta-whatsapp-header"
             data-cta="cta-whatsapp-header"
