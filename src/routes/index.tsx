@@ -7,6 +7,7 @@ import { Instagram } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { Disclosure } from "@/components/Disclosure";
 import { ReconhecimentoChecklist } from "@/components/ReconhecimentoChecklist";
+import { cn } from "@/lib/utils";
 
 function openWhatsApp(event: React.MouseEvent<HTMLAnchorElement>) {
   event.preventDefault();
@@ -390,22 +391,42 @@ function Index() {
               <div className="rounded-[2rem] bg-ink p-8 text-ink-foreground md:p-10">
                 <p className="eyebrow text-ink-foreground/60">Um dia qualquer</p>
                 <ul className="mt-8 space-y-7">
-                  {cenaDoDia.map((item, i) => (
-                    <li key={item.hora} className="relative flex gap-5">
-                      <span className="w-14 shrink-0 pt-[0.15rem] font-sans text-xs tracking-[0.14em] text-ink-foreground/50">
-                        {item.hora}
-                      </span>
-                      <span className="relative flex flex-col items-center">
-                        <span className="mt-[0.45rem] h-2 w-2 rounded-full bg-clay" />
-                        {i < cenaDoDia.length - 1 && (
-                          <span className="mt-2 w-px flex-1 bg-ink-foreground/20" />
-                        )}
-                      </span>
-                      <span className="text-[0.98rem] leading-[1.7] text-ink-foreground/85">
-                        {item.texto}
-                      </span>
-                    </li>
-                  ))}
+                  {cenaDoDia.map((item, i) => {
+                    const isLast = i === cenaDoDia.length - 1;
+                    return (
+                      <Reveal
+                        key={item.hora}
+                        as="li"
+                        delay={i * 110}
+                        className="relative flex gap-5"
+                      >
+                        <span className="w-14 shrink-0 pt-[0.15rem] font-sans text-xs tracking-[0.14em] text-ink-foreground/50">
+                          {item.hora}
+                        </span>
+                        <span className="relative flex flex-col items-center">
+                          <span
+                            className={cn(
+                              "mt-[0.45rem] rounded-full transition-transform duration-500",
+                              isLast
+                                ? "h-2.5 w-2.5 bg-clay shadow-[0_0_0_4px_color-mix(in_oklab,var(--color-clay)_25%,transparent)]"
+                                : "h-2 w-2 bg-clay",
+                            )}
+                          />
+                          {!isLast && (
+                            <span className="mt-2 w-px flex-1 bg-ink-foreground/20" />
+                          )}
+                        </span>
+                        <span
+                          className={cn(
+                            "text-[0.98rem] leading-[1.7]",
+                            isLast ? "text-ink-foreground" : "text-ink-foreground/85",
+                          )}
+                        >
+                          {item.texto}
+                        </span>
+                      </Reveal>
+                    );
+                  })}
                 </ul>
                 <p className="mt-9 border-t border-ink-foreground/15 pt-6 text-xs tracking-[0.16em] uppercase text-ink-foreground/55">
                   Amanhã, de novo.
