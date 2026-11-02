@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroOverwhelm from "@/assets/hero-overwhelm.jpg";
-import notesStill from "@/assets/notes-still.jpg";
+import heroOverwhelm from "@/assets/hero-overwhelm.webp";
+import notesStill from "@/assets/notes-still.webp";
 import amandaAsset from "@/assets/amanda-barbacena.jpg.asset.json";
 import { whatsappUrl } from "@/config/site";
 import { Instagram } from "lucide-react";
@@ -259,7 +259,9 @@ function Index() {
               alt="Amanda Barbacena"
               width={64}
               height={64}
-              loading="eager"
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
               className="h-8 w-8 shrink-0 rounded-full object-cover object-top ring-1 ring-ink/10"
             />
             <p className="min-w-0 truncate text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
@@ -332,8 +334,10 @@ function Index() {
             <img
               src={heroOverwhelm}
               alt="Mulher exausta à mesa de trabalho, com laptop, caderno e xícara, em luz suave de manhã"
-              width={1280}
-              height={1600}
+              width={900}
+              height={1125}
+              fetchPriority="high"
+              decoding="async"
               className="relative h-[420px] w-full rounded-[2rem] object-cover md:h-[620px]"
             />
           </Reveal>
@@ -641,9 +645,10 @@ function Index() {
             <img
               src={notesStill}
               alt="Caderno aberto com caneta sobre mesa de linho ao lado de um vaso com eucalipto"
-              width={1408}
-              height={1008}
+              width={1000}
+              height={716}
               loading="lazy"
+              decoding="async"
               className="h-[300px] w-full rounded-[2rem] object-cover md:h-[520px]"
             />
             <div
@@ -772,6 +777,7 @@ function Index() {
               width={1280}
               height={1920}
               loading="lazy"
+              decoding="async"
               className="relative h-[480px] w-full rounded-[2rem] object-cover object-top md:h-[600px]"
             />
             <figcaption className="mt-6 flex items-start gap-5 border-t border-ink/15 pt-5">
